@@ -71,5 +71,4 @@ public class PlayerMovement : MonoBehaviour {
             thirdPersonCharacter.Move (Vector3.zero, false, false);
         }
     }
-}
-
+} // PlayerMovement
