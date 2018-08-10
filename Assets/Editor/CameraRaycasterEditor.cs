@@ -40,8 +40,9 @@ public class CameraRaycasterEditor : Editor
         int currentArraySize = serializedObject.FindProperty("layerPriorities.Array.size").intValue;
         for (int i = 0; i < currentArraySize; i++)
         {
-            var prop = serializedObject.FindProperty(string.Format("layerPriorities.Array.data[{0}]", i));
+            var prop = serializedObject.FindProperty(string.Format("layerPriorities.Array.data[{0}]", i)); // {0} is a format operator
             prop.intValue = EditorGUILayout.LayerField(string.Format("Layer {0}:", i), prop.intValue);
         }
     }
+
 }
