@@ -176,7 +176,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a97354a3b94da418fc5922abc8830b, type: 2}
   m_IsPrefabAsset: 0
---- !u!1001 &579428363
+--- !u!4 &591885210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4198609511593626, guid: c0a97354a3b94da418fc5922abc8830b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1157479673}
+--- !u!1001 &701227437
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -215,22 +220,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: e9f239261af732d459345ddfdfe4d46d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: e9f239261af732d459345ddfdfe4d46d, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f239261af732d459345ddfdfe4d46d, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &591885210 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4198609511593626, guid: c0a97354a3b94da418fc5922abc8830b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1157479673}
 --- !u!1 &1058433648
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +382,7 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 408730, guid: e9f239261af732d459345ddfdfe4d46d,
     type: 2}
-  m_PrefabInternal: {fileID: 579428363}
+  m_PrefabInternal: {fileID: 701227437}
 --- !u!1001 &1310277077
 Prefab:
   m_ObjectHideFlags: 0
@@ -534,6 +526,10 @@ Prefab:
     - target: {fileID: 4299944528904776, guid: 23a2b49e3600e5c42b38086743b09c9e, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785579096807964, guid: 23a2b49e3600e5c42b38086743b09c9e, type: 2}
+      propertyPath: m_Name
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23a2b49e3600e5c42b38086743b09c9e, type: 2}
