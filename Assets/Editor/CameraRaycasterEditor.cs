@@ -45,4 +45,4 @@ public class CameraRaycasterEditor : Editor
         }
     }
 
-}
+} // CameraRaycasterEditor
