@@ -2197,7 +2197,8 @@ Prefab:
       propertyPath: m_Name
       value: Fountain
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114428856729767836, guid: 81a4f106b90851f4dba39d10ade9e6cc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 81a4f106b90851f4dba39d10ade9e6cc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &538697853 stripped
