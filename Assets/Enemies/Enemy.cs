@@ -39,6 +39,6 @@ public class Enemy : MonoBehaviour, IDamageable {
         }
     }
 
-    
+
 
 } // Enemy

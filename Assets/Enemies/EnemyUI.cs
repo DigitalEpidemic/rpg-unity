@@ -13,15 +13,13 @@ public class EnemyUI : MonoBehaviour {
     Camera cameraToLookAt;
 
     // Use this for initialization 
-    void Start()
-    {
+    void Start() {
         cameraToLookAt = Camera.main;
         Instantiate(enemyCanvasPrefab, transform.position, Quaternion.identity, transform);
     }
 
     // Update is called once per frame 
-    void LateUpdate()
-    {
+    void LateUpdate() {
         transform.LookAt(cameraToLookAt.transform);
         transform.rotation = Quaternion.LookRotation(cameraToLookAt.transform.forward);
     }
