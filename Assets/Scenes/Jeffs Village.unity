@@ -162,6 +162,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 1589238824477580, guid: 44ed8fb36c96f2248b4a568ff5c3b71e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44ed8fb36c96f2248b4a568ff5c3b71e, type: 2}
   m_IsPrefabAsset: 0
@@ -2457,6 +2461,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1927650033391634, guid: 0db5fdd3fc0a1a144a3ab6d5230807fb, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0db5fdd3fc0a1a144a3ab6d5230807fb, type: 2}
   m_IsPrefabAsset: 0
@@ -2503,6 +2511,10 @@ Prefab:
     - target: {fileID: 4475209179363858, guid: 91d4d28089371474bbd64dcdcb0c4613, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387535865052738, guid: 91d4d28089371474bbd64dcdcb0c4613, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d4d28089371474bbd64dcdcb0c4613, type: 2}
@@ -2918,6 +2930,11 @@ Prefab:
       value: 88.26
       objectReference: {fileID: 0}
     - target: {fileID: 195367535995020892, guid: 7737647c22c1fc64a88d5cd030c352ce,
+        type: 2}
+      propertyPath: m_StoppingDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 195817358988208362, guid: 7737647c22c1fc64a88d5cd030c352ce,
         type: 2}
       propertyPath: m_StoppingDistance
       value: 0.5
@@ -5329,6 +5346,10 @@ Prefab:
       propertyPath: m_Name
       value: Village Trail Ramp 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1760259252710810, guid: 071c0794da8d836488b902c4c463457d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 071c0794da8d836488b902c4c463457d, type: 2}
   m_IsPrefabAsset: 0
@@ -7633,6 +7654,10 @@ Prefab:
     - target: {fileID: 4952349072324676, guid: c2706270027787044bae176023e85620, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346352419076870, guid: c2706270027787044bae176023e85620, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2706270027787044bae176023e85620, type: 2}
