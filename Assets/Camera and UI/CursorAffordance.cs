@@ -25,7 +25,6 @@ public class CursorAffordance : MonoBehaviour {
 
     // Called after all Update functions have been called
     void OnLayerChanged(int newLayer) {
-        print("Cursor over new layer");
         switch (newLayer) {
             case walkableLayerNumber:
                 Cursor.SetCursor(walkCursor, cursorHotspot, CursorMode.Auto);
