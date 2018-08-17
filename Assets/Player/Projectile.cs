@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
-    [SerializeField] float damageCaused = 10f;
-
+    public float damageCaused;
+    public float projectileSpeed; // Note other classes can set
+    
     void OnTriggerEnter(Collider collider) {
         Component damageableComponent = collider.gameObject.GetComponent(typeof(IDamageable));
 
