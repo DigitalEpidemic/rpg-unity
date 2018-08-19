@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 114279377897842886}
   - component: {fileID: 114845834606781138}
   m_Layer: 10
-  m_Name: Bruiser
+  m_Name: Thug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
