@@ -39,6 +39,4 @@ public class CursorAffordance : MonoBehaviour {
 
     }
 
-    // TODO Consider de-registering OnLayerChanged on exit
-
 } // CursorAffordance
