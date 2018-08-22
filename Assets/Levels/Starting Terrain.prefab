@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 218855368538492304}
   - component: {fileID: 154230115935411422}
   m_Layer: 9
-  m_Name: Showcase Terrain
+  m_Name: Starting Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
