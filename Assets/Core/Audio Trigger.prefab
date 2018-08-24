@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a172d07bd37a7854a8adb17e81aea447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: db4114f2853bc604c88c9de3d5e36a54, type: 3}
+  clip: {fileID: 0}
   layerFilter: 12
   triggerRadius: 5
   isOneTimeOnly: 1
