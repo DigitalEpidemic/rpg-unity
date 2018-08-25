@@ -9929,6 +9929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energyBar: {fileID: 1293131715}
   maxEnergyPoints: 100
+  pointsPerClick: 10
 --- !u!1 &1474882994
 GameObject:
   m_ObjectHideFlags: 0
@@ -13035,6 +13036,22 @@ Prefab:
     - target: {fileID: 4653946754613416, guid: 0bd01815b1ca1ec46bcc9be7fcc958eb, type: 2}
       propertyPath: m_LocalPosition.y
       value: 7.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803287594654246, guid: 0bd01815b1ca1ec46bcc9be7fcc958eb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803287594654246, guid: 0bd01815b1ca1ec46bcc9be7fcc958eb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803287594654246, guid: 0bd01815b1ca1ec46bcc9be7fcc958eb, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803287594654246, guid: 0bd01815b1ca1ec46bcc9be7fcc958eb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd01815b1ca1ec46bcc9be7fcc958eb, type: 2}
