@@ -17,11 +17,9 @@ namespace RPG.Characters {
 
         [SerializeField] float damagePerHit = 10f;
 
-        
+        [SerializeField] Weapon weaponInUse = null;
 
-        [SerializeField] Weapon weaponInUse;
-
-        [SerializeField] AnimatorOverrideController animatorOverrideController;
+        [SerializeField] AnimatorOverrideController animatorOverrideController = null;
         Animator animator;
 
         float currentHealthPoints;
