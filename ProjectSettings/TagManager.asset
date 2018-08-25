@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Walkable
+  - Potentially Walkable
   - Enemy
   - Stiff
   - Player

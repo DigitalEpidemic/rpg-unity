@@ -27,6 +27,14 @@ namespace RPG.Characters {
             walkTarget = new GameObject("walkTarget");
 
             cameraRaycaster.notifyMouseClickObservers += ProcessMouseClick;
+            cameraRaycaster.onMouseOverPotentiallyWalkable += OnMouseOverPotentiallyWalkable;
+        }
+
+        void OnMouseOverPotentiallyWalkable(Vector3 destination) {
+            if (Input.GetMouseButton(0)) {
+                walkTarget.transform.position = destination;
+                aiCharacterControl.SetTarget(walkTarget.transform);
+            }
         }
 
         void ProcessMouseClick(RaycastHit raycastHit, int layerHit) {
@@ -35,11 +43,6 @@ namespace RPG.Characters {
                     // Navigate to the enemy
                     GameObject enemy = raycastHit.collider.gameObject;
                     aiCharacterControl.SetTarget(enemy.transform);
-                    break;
-                case walkableLayerNumber:
-                    // Navigate to point on the ground
-                    walkTarget.transform.position = raycastHit.point;
-                    aiCharacterControl.SetTarget(walkTarget.transform);
                     break;
                 default:
                     Debug.Log("Do not know how to handle mouse click for PlayerMovement");
