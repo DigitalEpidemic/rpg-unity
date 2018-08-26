@@ -3410,6 +3410,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 782442370}
     m_Modifications:
+    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
+        type: 2}
+      propertyPath: abilities.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalPosition.x
       value: 14.226685
@@ -3445,6 +3450,12 @@ Prefab:
     - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
         type: 2}
       propertyPath: ability1
+      value: 
+      objectReference: {fileID: 11400000, guid: 810c0eb6d08a21a44849ea3f74919360,
+        type: 2}
+    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
+        type: 2}
+      propertyPath: abilities.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 810c0eb6d08a21a44849ea3f74919360,
         type: 2}
