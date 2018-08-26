@@ -13,7 +13,7 @@ namespace RPG.Characters {
 
         // Use this for initialization
         void Start() {
-
+            print("PowerAttackBehaviour attached to " + gameObject.name);
         }
 
         // Update is called once per frame
