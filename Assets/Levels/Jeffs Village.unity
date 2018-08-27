@@ -3417,26 +3417,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114867043716825538, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: energyBar
-      value: 
-      objectReference: {fileID: 1293131715}
-    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: baseDamage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114867043716825538, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: regenPointsPerSecond
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: maxHealthPoints
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabAsset: 0
