@@ -765,64 +765,39 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4695557825634282, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 20092527752049118, guid: ef5f0307231176944ab46cd8697a6417,
-        type: 2}
-      propertyPath: field of view
-      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4537615889400742, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114423285249978654, guid: ef5f0307231176944ab46cd8697a6417,
-        type: 2}
-      propertyPath: walkCursor
-      value: 
-      objectReference: {fileID: 2800000, guid: 126f05283cccfd8479162fdfdac8085e, type: 3}
-    - target: {fileID: 114423285249978654, guid: ef5f0307231176944ab46cd8697a6417,
-        type: 2}
-      propertyPath: EnemyCursor
-      value: 
-      objectReference: {fileID: 2800000, guid: b350e679eadd17f41b60d2f88fec7c91, type: 3}
-    - target: {fileID: 114423285249978654, guid: ef5f0307231176944ab46cd8697a6417,
-        type: 2}
-      propertyPath: enemyCursor
-      value: 
-      objectReference: {fileID: 2800000, guid: b350e679eadd17f41b60d2f88fec7c91, type: 3}
-    m_RemovedComponents:
-    - {fileID: 114368361155660166, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef5f0307231176944ab46cd8697a6417, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &71279043 stripped
@@ -3410,11 +3385,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 782442370}
     m_Modifications:
-    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: abilities.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalPosition.x
       value: 46.54
@@ -3447,29 +3417,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
+    - target: {fileID: 114867043716825538, guid: 7737647c22c1fc64a88d5cd030c352ce,
         type: 2}
-      propertyPath: ability1
+      propertyPath: energyBar
       value: 
-      objectReference: {fileID: 11400000, guid: 810c0eb6d08a21a44849ea3f74919360,
-        type: 2}
-    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: abilities.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2e288e3af717d5f4181a45c55b3d3ba0,
-        type: 2}
-    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: baseDamage
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697968544085642, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: abilities.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 810c0eb6d08a21a44849ea3f74919360,
-        type: 2}
+      objectReference: {fileID: 1293131715}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabAsset: 0
@@ -9862,24 +9814,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461611116}
   m_CullTransparentMesh: 0
---- !u!1 &1467265909 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce,
-    type: 2}
-  m_PrefabInternal: {fileID: 509624228}
---- !u!114 &1467265910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1467265909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3926121322dc35942be6c16f40a8346d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energyBar: {fileID: 1293131715}
-  maxEnergyPoints: 100
 --- !u!1 &1474882994
 GameObject:
   m_ObjectHideFlags: 0
