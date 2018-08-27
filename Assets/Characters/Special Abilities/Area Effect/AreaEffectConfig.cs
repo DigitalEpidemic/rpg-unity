@@ -24,5 +24,5 @@ namespace RPG.Characters {
             return radius;
         }
 
-    } // PowerAttackConfig
+    } // AreaEffectConfig
 }

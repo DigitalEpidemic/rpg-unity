@@ -1,7 +1,6 @@
 using UnityEngine;
 
-// TODO Change to RPG.Characters
-namespace UnityStandardAssets.Characters.ThirdPerson {
+namespace RPG.Characters {
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(CapsuleCollider))]
     [RequireComponent(typeof(Animator))]
