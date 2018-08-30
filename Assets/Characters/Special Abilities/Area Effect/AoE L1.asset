@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: AoE L1
   m_EditorClassIdentifier: 
   energyCost: 50
+  particlePrefab: {fileID: 1694298519208000, guid: d851915c451469744a76157159b927e8,
+    type: 2}
   radius: 5
   damageToEachTarget: 15

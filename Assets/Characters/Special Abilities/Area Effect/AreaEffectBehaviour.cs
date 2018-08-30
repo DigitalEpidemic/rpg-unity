@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using System;
 
 namespace RPG.Characters {
     public class AreaEffectBehaviour : MonoBehaviour, ISpecialAbility {
@@ -17,6 +18,19 @@ namespace RPG.Characters {
         }
 
         public void Use(AbilityUseParams useParams) {
+            DealRadialDamage(useParams);
+            PlayParticleEffect();
+        }
+
+        private void PlayParticleEffect() {
+            var prefab = Instantiate(config.GetParticlePrefab(), transform.position, Quaternion.identity);
+            // TODO Decide if particle system attaches to player
+            ParticleSystem myParticleSystem = prefab.GetComponent<ParticleSystem>();
+            myParticleSystem.Play();
+            Destroy(prefab, myParticleSystem.main.duration);
+        }
+
+        private void DealRadialDamage(AbilityUseParams useParams) {
             print("AreaEffectBehaviour used by: " + gameObject.name);
 
             // Static sphere cast for target
@@ -31,6 +45,5 @@ namespace RPG.Characters {
                 }
             }
         }
-
     } // AreaEffectBehaviour
 }
