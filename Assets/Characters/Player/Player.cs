@@ -47,9 +47,9 @@ namespace RPG.Characters {
             audioSource = GetComponent<AudioSource>();
         }
 
-        public void TakeDamage(float damage) {
-            bool playerDies = (currentHealthPoints - damage <= 0);
-            ReduceHealth(damage);
+        public void AdjustHealth(float changePoints) {
+            bool playerDies = (currentHealthPoints - changePoints <= 0);
+            ReduceHealth(changePoints);
 
             if (playerDies) {
                 StartCoroutine(KillPlayer());
@@ -125,7 +125,7 @@ namespace RPG.Characters {
         private void AttackTarget(Enemy enemy) {
             if (Time.time - lastHitTime > weaponInUse.GetMinTimeBetweenHits()) {
                 animator.SetTrigger(ATTACK_TRIGGER);
-                enemy.TakeDamage(baseDamage);
+                enemy.AdjustHealth(baseDamage);
                 lastHitTime = Time.time;
             }
         }

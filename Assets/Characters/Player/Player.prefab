@@ -3105,8 +3105,9 @@ MonoBehaviour:
   animatorOverrideController: {fileID: 22100000, guid: bfdf39bb7aea2c349ae339e2faad31cf,
     type: 2}
   abilities:
-  - {fileID: 11400000, guid: 2e288e3af717d5f4181a45c55b3d3ba0, type: 2}
   - {fileID: 11400000, guid: 810c0eb6d08a21a44849ea3f74919360, type: 2}
+  - {fileID: 11400000, guid: 2e288e3af717d5f4181a45c55b3d3ba0, type: 2}
+  - {fileID: 11400000, guid: 1f59786d393da3a408de4e0fce93bb7d, type: 2}
 --- !u!114 &114768375330894030
 MonoBehaviour:
   m_ObjectHideFlags: 1

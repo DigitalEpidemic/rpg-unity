@@ -41,7 +41,7 @@ namespace RPG.Characters {
 
                 if (damageable != null) {
                     float damageToDeal = useParams.baseDamage + config.GetDamageToEachTarget(); // TODO Is this okay?
-                    damageable.TakeDamage(damageToDeal);
+                    damageable.AdjustHealth(damageToDeal);
                 }
             }
         }
