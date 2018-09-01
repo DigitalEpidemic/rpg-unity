@@ -147,5 +147,5 @@ namespace RPG.Characters {
                 m_Animator.applyRootMotion = false;
             }
         }
-    }
+    } // ThirdPersonCharacter
 }

@@ -39,5 +39,5 @@ namespace RPG.Characters {
         public void SetTarget(Transform target) {
             this.target = target;
         }
-    }
+    } // AICharacterControl
 }

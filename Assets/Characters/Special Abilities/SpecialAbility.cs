@@ -12,7 +12,7 @@ namespace RPG.Characters {
             this.target = target;
             this.baseDamage = baseDamage;
         }
-    }
+    } // AbilityUseParams
 
     public abstract class SpecialAbility : ScriptableObject {
 

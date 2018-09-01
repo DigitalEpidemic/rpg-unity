@@ -19,5 +19,5 @@ namespace RPG.Characters {
             return extraHealth;
         }
 
-    } // PowerAttackConfig
+    } // SelfHealConfig
 }
