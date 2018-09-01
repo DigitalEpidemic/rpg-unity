@@ -13,10 +13,6 @@ namespace RPG.Characters {
             this.config = configToSet;
         }
 
-        void Start() {
-            print("AreaEffectBehaviour attached to: " + gameObject.name);
-        }
-
         public void Use(AbilityUseParams useParams) {
             DealRadialDamage(useParams);
             PlayParticleEffect();
@@ -31,15 +27,14 @@ namespace RPG.Characters {
         }
 
         private void DealRadialDamage(AbilityUseParams useParams) {
-            print("AreaEffectBehaviour used by: " + gameObject.name);
-
             // Static sphere cast for target
             RaycastHit[] hits = Physics.SphereCastAll(transform.position, config.GetRadius(), Vector3.up, config.GetRadius());
 
             foreach (RaycastHit hit in hits) {
                 var damageable = hit.collider.gameObject.GetComponent<IDamageable>();
+                bool hitPlayer = hit.collider.gameObject.GetComponent<Player>();
 
-                if (damageable != null) {
+                if (damageable != null && !hitPlayer) {
                     float damageToDeal = useParams.baseDamage + config.GetDamageToEachTarget(); // TODO Is this okay?
                     damageable.AdjustHealth(damageToDeal);
                 }

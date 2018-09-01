@@ -11,10 +11,6 @@ namespace RPG.Characters {
             this.config = configToSet;
         }
 
-        // Use this for initialization
-        void Start() {
-            print("PowerAttackBehaviour attached to " + gameObject.name);
-        }
 
         public void Use(AbilityUseParams useParams) {
             DealDamage(useParams);
@@ -22,7 +18,6 @@ namespace RPG.Characters {
         }
 
         private void DealDamage(AbilityUseParams useParams) {
-            print("Power Attack used by: " + gameObject.name);
             float damageToDeal = useParams.baseDamage + config.GetExtraDamage();
             useParams.target.AdjustHealth(damageToDeal);
         }
