@@ -5,11 +5,13 @@ using UnityEngine;
 namespace RPG.Characters {
     public class SelfHealBehaviour : MonoBehaviour, ISpecialAbility {
 
-        SelfHealConfig config;
-        Player player;
+        SelfHealConfig config = null;
+        Player player = null;
+        AudioSource audioSource = null;
 
         void Start() {
             player = GetComponent<Player>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         public void SetConfig(SelfHealConfig configToSet) {
@@ -17,7 +19,18 @@ namespace RPG.Characters {
         }
 
         public void Use(AbilityUseParams useParams) {
-            player.AdjustHealth(-config.GetExtraHealth()); // Note the negative
+            player.Heal(config.GetExtraHealth());
+            PlayParticleEffect();
+            audioSource.clip = config.GetAudioClip(); // TODO Move audio to parent class
+            audioSource.Play();
+        }
+
+        private void PlayParticleEffect() {
+            var prefab = Instantiate(config.GetParticlePrefab(), transform.position, Quaternion.identity);
+            prefab.transform.parent = transform; // Attaching to player
+            ParticleSystem myParticleSystem = prefab.GetComponent<ParticleSystem>();
+            myParticleSystem.Play();
+            Destroy(prefab, myParticleSystem.main.duration);
         }
 
     } // SelfHealBehaviour

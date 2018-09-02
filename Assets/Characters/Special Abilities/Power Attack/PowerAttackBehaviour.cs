@@ -6,6 +6,11 @@ namespace RPG.Characters {
     public class PowerAttackBehaviour : MonoBehaviour, ISpecialAbility {
 
         PowerAttackConfig config;
+        AudioSource audioSource = null;
+
+        void Start() {
+            audioSource = GetComponent<AudioSource>();
+        }
 
         public void SetConfig(PowerAttackConfig configToSet) {
             this.config = configToSet;
@@ -14,12 +19,14 @@ namespace RPG.Characters {
 
         public void Use(AbilityUseParams useParams) {
             DealDamage(useParams);
-            PlayParticleEffect();
+            PlayParticleEffect(); // TODO Move to parent class
+            audioSource.clip = config.GetAudioClip();
+            audioSource.Play();
         }
 
         private void DealDamage(AbilityUseParams useParams) {
             float damageToDeal = useParams.baseDamage + config.GetExtraDamage();
-            useParams.target.AdjustHealth(damageToDeal);
+            useParams.target.TakeDamage(damageToDeal);
         }
 
         private void PlayParticleEffect() {

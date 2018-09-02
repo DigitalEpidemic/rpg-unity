@@ -8,6 +8,11 @@ namespace RPG.Characters {
     public class AreaEffectBehaviour : MonoBehaviour, ISpecialAbility {
 
         AreaEffectConfig config;
+        AudioSource audioSource = null;
+
+        void Start() {
+            audioSource = GetComponent<AudioSource>();
+        }
 
         public void SetConfig(AreaEffectConfig configToSet) {
             this.config = configToSet;
@@ -16,6 +21,8 @@ namespace RPG.Characters {
         public void Use(AbilityUseParams useParams) {
             DealRadialDamage(useParams);
             PlayParticleEffect();
+            audioSource.clip = config.GetAudioClip();
+            audioSource.Play();
         }
 
         private void PlayParticleEffect() {
@@ -36,7 +43,7 @@ namespace RPG.Characters {
 
                 if (damageable != null && !hitPlayer) {
                     float damageToDeal = useParams.baseDamage + config.GetDamageToEachTarget(); // TODO Is this okay?
-                    damageable.AdjustHealth(damageToDeal);
+                    damageable.TakeDamage(damageToDeal);
                 }
             }
         }
