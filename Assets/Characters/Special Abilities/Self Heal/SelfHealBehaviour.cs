@@ -26,11 +26,13 @@ namespace RPG.Characters {
         }
 
         private void PlayParticleEffect() {
-            var prefab = Instantiate(config.GetParticlePrefab(), transform.position, Quaternion.identity);
+            var particlePrefab = config.GetParticlePrefab();
+            var prefab = Instantiate(particlePrefab, transform.position, particlePrefab.transform.rotation);
             prefab.transform.parent = transform; // Attaching to player
             ParticleSystem myParticleSystem = prefab.GetComponent<ParticleSystem>();
             myParticleSystem.Play();
-            Destroy(prefab, myParticleSystem.main.duration);
+            float totalDuration = myParticleSystem.main.duration + myParticleSystem.main.startLifetime.constant; // Fixes duration bug
+            Destroy(prefab, totalDuration);
         }
 
     } // SelfHealBehaviour
