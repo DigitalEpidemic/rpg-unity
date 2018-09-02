@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198524092156754306}
   - component: {fileID: 199206617873146782}
   m_Layer: 0
-  m_Name: SH_VFX New
+  m_Name: SH_VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
