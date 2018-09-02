@@ -21,7 +21,7 @@ namespace RPG.Characters {
         [SerializeField] GameObject particlePrefab = null;
         [SerializeField] AudioClip audioClip = null;
 
-        protected ISpecialAbility behaviour; // Only methods or derived classes can access
+        protected AbilityBehaviour behaviour; // Only methods or derived classes can access
 
         abstract public void AttachComponentTo(GameObject gameObjectToAttachTo);
 
@@ -42,8 +42,4 @@ namespace RPG.Characters {
         }
 
     } // AbilityConfig
-
-    public interface ISpecialAbility {
-        void Use(AbilityUseParams useParams);
-    } // ISpecialAbility
 }

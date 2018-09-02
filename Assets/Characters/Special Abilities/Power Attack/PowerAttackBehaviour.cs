@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Characters {
-    public class PowerAttackBehaviour : MonoBehaviour, ISpecialAbility {
+    public class PowerAttackBehaviour : AbilityBehaviour {
 
         PowerAttackConfig config;
         AudioSource audioSource = null;
@@ -17,7 +17,7 @@ namespace RPG.Characters {
         }
 
 
-        public void Use(AbilityUseParams useParams) {
+        public override void Use(AbilityUseParams useParams) {
             DealDamage(useParams);
             PlayParticleEffect(); // TODO Move to parent class
             audioSource.clip = config.GetAudioClip();
@@ -30,7 +30,8 @@ namespace RPG.Characters {
         }
 
         private void PlayParticleEffect() {
-            var prefab = Instantiate(config.GetParticlePrefab(), transform.position, Quaternion.identity);
+            var particlePrefab = config.GetParticlePrefab();
+            var prefab = Instantiate(particlePrefab, transform.position, particlePrefab.transform.rotation);
             // TODO Decide if particle system attaches to player
             ParticleSystem myParticleSystem = prefab.GetComponent<ParticleSystem>();
             myParticleSystem.Play();
