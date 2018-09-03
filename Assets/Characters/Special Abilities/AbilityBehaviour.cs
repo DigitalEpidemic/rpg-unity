@@ -26,5 +26,11 @@ namespace RPG.Characters {
             Destroy(particleObject, totalDuration);
         }
 
+        protected void PlayAbilitySound() {
+            var abilitySound = config.GetRandomAbilitySound(); // TODO Change to random clip
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(abilitySound);
+        }
+
     } // AbilityBehaviour
 }
