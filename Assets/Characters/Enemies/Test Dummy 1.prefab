@@ -176,7 +176,6 @@ GameObject:
   - component: {fileID: 136612214348371710}
   - component: {fileID: 114524770030295592}
   - component: {fileID: 195967308936247726}
-  - component: {fileID: 114460493260224360}
   - component: {fileID: 114431420343693100}
   m_Layer: 10
   m_Name: Test Dummy 1
@@ -801,18 +800,6 @@ MonoBehaviour:
     type: 2}
   projectileSocket: {fileID: 1478642818145492}
   aimOffset: {x: 0, y: 1, z: 0}
---- !u!114 &114460493260224360
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1338251944359690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &114524770030295592
 MonoBehaviour:
   m_ObjectHideFlags: 1

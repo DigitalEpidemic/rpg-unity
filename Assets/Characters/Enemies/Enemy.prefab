@@ -659,7 +659,6 @@ GameObject:
   - component: {fileID: 13615390}
   - component: {fileID: 195419822158793410}
   - component: {fileID: 11469404}
-  - component: {fileID: 114974468131415178}
   - component: {fileID: 114805109323397436}
   m_Layer: 10
   m_Name: Enemy
@@ -2791,23 +2790,12 @@ MonoBehaviour:
   chaseRadius: 6
   attackRadius: 8
   damagePerShot: 9
-  secondsBetweenShots: 0.5
+  firingPeriodInSeconds: 0.5
+  firingPeriodVariation: 0.1
   projectileToUse: {fileID: 1332372203070402, guid: 6001f3744a339a1469735c8d3d8e6cea,
     type: 2}
   projectileSocket: {fileID: 1368642079913398}
   aimOffset: {x: 0, y: 1, z: 0}
---- !u!114 &114974468131415178
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!195 &195419822158793410
 NavMeshAgent:
   m_ObjectHideFlags: 1

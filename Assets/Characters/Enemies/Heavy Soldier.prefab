@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 136854193731605376}
   - component: {fileID: 195943038561682700}
   - component: {fileID: 114401163973751902}
-  - component: {fileID: 114279377897842886}
   - component: {fileID: 114845834606781138}
   m_Layer: 10
   m_Name: Heavy Soldier
@@ -2944,18 +2943,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114279377897842886
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1188671008350548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &114401163973751902
 MonoBehaviour:
   m_ObjectHideFlags: 1
