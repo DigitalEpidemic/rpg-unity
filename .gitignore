@@ -34,53 +34,26 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Assets/Standard Assets/
-Assets/Import Packages/
-Assets/Blends and FBX/
-Assets/Environment/
-Assets/RPG Character Animation Pack/
-Assets/Characters/Animations/2Hand-Axe/
-Assets/Characters/Animations/2Hand-Bow/
-Assets/Characters/Animations/2Hand-Club/
-Assets/Characters/Animations/2Hand-Crossbow/
-Assets/Characters/Animations/2Hand-Spear/
-Assets/Characters/Animations/2Hand-Sword/
-Assets/Characters/Animations/Armed/
-Assets/Characters/Animations/Climb-Ladder/
-Assets/Characters/Animations/Dagger/
-Assets/Characters/Animations/Item/
-Assets/Characters/Animations/Ledge/
-Assets/Characters/Animations/Mace/
-Assets/Characters/Animations/Pistol/
-Assets/Characters/Animations/Relax/
-Assets/Characters/Animations/Shield/
-Assets/Characters/Animations/Shooting/
-Assets/Characters/Animations/Spear/
-Assets/Characters/Animations/Staff/
-Assets/Characters/Animations/Swimming/
-Assets/Characters/Animations/Sword/
-Assets/Characters/Animations/Unarmed/
-Assets/Characters/Weapons/Other/
-Assets/Characters/ThirdPersonCharacter/
-Assets/Characters//Weapons/Ranged/Ball Gun/RollerBall/Models/RollerBall.fbx
+
+# Copyrighted Material
+*.fbx
+*.fbx.meta
+*.wav
+*.wav.meta
+*.blend
+*.blend.meta
+
+# Specific Files
 Assets/Characters/Animations/RPG-Character-Animation-Controller.controller
-Assets/Characters/Models/
-Assets/Core/alarm_siren_loop_10.wav
-Assets/Core/209162__lukesharples__argargarhh.wav
-Assets/Core/429037__theuncertainman__how-can-i-help-npc-british-male.wav
-Assets/Core/429038__theuncertainman__greetings-npc-british-male.wav
-Assets/Characters/Weapons/Components/Dirt Old Hoe.fbx
-Assets/Characters/Weapons/Components/Simple Arrow.fbx
-Assets/Characters/Weapons/Components/Simple Bow.fbx
-Assets/Characters/Weapons/Components/Sword.fbx
-Assets/Fantasy Skybox FREE/
-Assets/Characters/Player/Sounds/
+
+# Asset Directories
+# *.* To Ignore Everything Except .cs Extension
+# ** For Next Level
+Assets/Import Packages/
+Assets/Environment/
+Assets/Characters/Animations/
 Assets/Asset Packs - For Students/
 Assets/PolygonDungeon/
-Assets/Characters/Special Abilities/might.wav
-Assets/Characters/Special Abilities/Area Effect/thornhit.wav
-Assets/Characters/Special Abilities/Power Attack/zeal.wav
-Assets/Characters/Special Abilities/Self Heal/prayer.wav
-Assets/Characters/Special Abilities/Power Attack/one hand swing large15.wav
-Assets/Characters/Weapons/smallmetalweapon.wav
-Assets/Characters/Weapons/Ranged/Ball Gun/RollerBall/Models/RollerBall.fbx
+
+# Whitelist .cs Extensions
+!Assets/**/*.cs
