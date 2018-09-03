@@ -53,6 +53,10 @@ namespace RPG.Characters {
             AttachInitialAbilities();
         }
 
+        public void PutWeaponInHand(Weapon weaponConfig) {
+            Debug.LogFormat("Putting {0} in Player's hand!", weaponConfig); // Formatted log
+        }
+
         private void AttachInitialAbilities() {
             for (int abilitiesIndex = 0; abilitiesIndex < abilities.Length; abilitiesIndex++) {
                 abilities[abilitiesIndex].AttachAbilityTo(gameObject);
