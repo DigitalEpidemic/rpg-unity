@@ -4,7 +4,6 @@ using UnityEngine;
 
 // TODO Consider re-wiring
 using RPG.Core;
-using RPG.Weapons;
 
 namespace RPG.Characters {
     public class Enemy : MonoBehaviour, IDamageable {

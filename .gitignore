@@ -60,19 +60,19 @@ Assets/Characters/Animations/Staff/
 Assets/Characters/Animations/Swimming/
 Assets/Characters/Animations/Sword/
 Assets/Characters/Animations/Unarmed/
-Assets/Weapons/Other/
+Assets/Characters/Weapons/Other/
 Assets/Characters/ThirdPersonCharacter/
-Assets/Weapons/Ranged/Ball Gun/RollerBall/Models/RollerBall.fbx
+Assets/Characters//Weapons/Ranged/Ball Gun/RollerBall/Models/RollerBall.fbx
 Assets/Characters/Animations/RPG-Character-Animation-Controller.controller
 Assets/Characters/Models/
 Assets/Core/alarm_siren_loop_10.wav
 Assets/Core/209162__lukesharples__argargarhh.wav
 Assets/Core/429037__theuncertainman__how-can-i-help-npc-british-male.wav
 Assets/Core/429038__theuncertainman__greetings-npc-british-male.wav
-Assets/Weapons/Components/Dirt Old Hoe.fbx
-Assets/Weapons/Components/Simple Arrow.fbx
-Assets/Weapons/Components/Simple Bow.fbx
-Assets/Weapons/Components/Sword.fbx
+Assets/Characters/Weapons/Components/Dirt Old Hoe.fbx
+Assets/Characters/Weapons/Components/Simple Arrow.fbx
+Assets/Characters/Weapons/Components/Simple Bow.fbx
+Assets/Characters/Weapons/Components/Sword.fbx
 Assets/Fantasy Skybox FREE/
 Assets/Characters/Player/Sounds/
 Assets/Asset Packs - For Students/
@@ -82,4 +82,5 @@ Assets/Characters/Special Abilities/Area Effect/thornhit.wav
 Assets/Characters/Special Abilities/Power Attack/zeal.wav
 Assets/Characters/Special Abilities/Self Heal/prayer.wav
 Assets/Characters/Special Abilities/Power Attack/one hand swing large15.wav
-Assets/Weapons/smallmetalweapon.wav
+Assets/Characters/Weapons/smallmetalweapon.wav
+Assets/Characters/Weapons/Ranged/Ball Gun/RollerBall/Models/RollerBall.fbx

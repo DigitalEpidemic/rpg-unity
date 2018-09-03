@@ -5,7 +5,7 @@ using UnityEngine;
 // TODO Consider re-wiring
 using RPG.Core;
 
-namespace RPG.Weapons {
+namespace RPG.Characters {
     public class Projectile : MonoBehaviour {
 
         [SerializeField] float projectileSpeed;
