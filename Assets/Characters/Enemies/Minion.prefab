@@ -284,7 +284,6 @@ GameObject:
   - component: {fileID: 54051807161522284}
   - component: {fileID: 136608534893784540}
   - component: {fileID: 195730722434114854}
-  - component: {fileID: 114928616845357078}
   - component: {fileID: 114437790307582424}
   m_Layer: 10
   m_Name: Minion
@@ -2977,25 +2976,6 @@ MonoBehaviour:
     type: 2}
   projectileSocket: {fileID: 1049787214995394}
   aimOffset: {x: 0, y: 1, z: 0}
---- !u!114 &114928616845357078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1201894364811764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 1800
-  m_StationaryTurnSpeed: 900
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 0.75
-  m_AnimSpeedMultiplier: 0.75
-  m_GroundCheckDistance: 1
 --- !u!136 &136608534893784540
 CapsuleCollider:
   m_ObjectHideFlags: 1

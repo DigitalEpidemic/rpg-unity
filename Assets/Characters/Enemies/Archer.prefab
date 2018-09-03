@@ -428,7 +428,6 @@ GameObject:
   - component: {fileID: 54363494682828586}
   - component: {fileID: 136261984668287542}
   - component: {fileID: 195064601293960896}
-  - component: {fileID: 114678454953345212}
   - component: {fileID: 114733112844312026}
   m_Layer: 10
   m_Name: Archer
@@ -3350,25 +3349,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCanvasPrefab: {fileID: 1311539807392560, guid: 9a9d70d10b9331d469e57254147e0430,
     type: 2}
---- !u!114 &114678454953345212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316253530597210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 1800
-  m_StationaryTurnSpeed: 900
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 0.75
-  m_AnimSpeedMultiplier: 0.75
-  m_GroundCheckDistance: 1
 --- !u!114 &114733112844312026
 MonoBehaviour:
   m_ObjectHideFlags: 1

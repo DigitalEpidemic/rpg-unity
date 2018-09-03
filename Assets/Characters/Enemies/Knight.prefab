@@ -409,7 +409,6 @@ GameObject:
   - component: {fileID: 54720256740534616}
   - component: {fileID: 136854193731605376}
   - component: {fileID: 195943038561682700}
-  - component: {fileID: 114401163973751902}
   - component: {fileID: 114845834606781138}
   m_Layer: 10
   m_Name: Knight
@@ -2943,25 +2942,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114401163973751902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1188671008350548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 1800
-  m_StationaryTurnSpeed: 900
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 0.75
-  m_AnimSpeedMultiplier: 0.75
-  m_GroundCheckDistance: 1
 --- !u!114 &114402567419569376
 MonoBehaviour:
   m_ObjectHideFlags: 1
