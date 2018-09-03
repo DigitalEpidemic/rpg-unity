@@ -23,7 +23,13 @@ namespace RPG.Characters {
 
         protected AbilityBehaviour behaviour; // Only methods or derived classes can access
 
-        abstract public void AttachComponentTo(GameObject gameObjectToAttachTo);
+        public abstract AbilityBehaviour GetBehaviourComponent(GameObject objectToAttachTo);
+
+        public void AttachAbilityTo(GameObject objectToAttachTo) {
+            AbilityBehaviour behaviourComponent = GetBehaviourComponent(objectToAttachTo);
+            behaviourComponent.SetConfig(this);
+            behaviour = behaviourComponent;
+        }
 
         public void Use(AbilityUseParams useParams) {
             behaviour.Use(useParams);

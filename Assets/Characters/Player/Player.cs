@@ -55,7 +55,7 @@ namespace RPG.Characters {
 
         private void AttachInitialAbilities() {
             for (int abilitiesIndex = 0; abilitiesIndex < abilities.Length; abilitiesIndex++) {
-                abilities[abilitiesIndex].AttachComponentTo(gameObject);
+                abilities[abilitiesIndex].AttachAbilityTo(gameObject);
             }
         }
 
