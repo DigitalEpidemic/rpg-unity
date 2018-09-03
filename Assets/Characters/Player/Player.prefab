@@ -3123,7 +3123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stoppingDistance: 1
   moveSpeedMultiplier: 1
-  animationSpeedMultiplier: 1.5
+  animationSpeedMultiplier: 1
   movingTurnSpeed: 360
   stationaryTurnSpeed: 180
   moveThreshold: 1

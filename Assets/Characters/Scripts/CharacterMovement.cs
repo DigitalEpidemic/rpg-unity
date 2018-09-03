@@ -55,6 +55,10 @@ namespace RPG.Characters {
             UpdateAnimator();
         }
 
+        public void Kill() {
+            // Allow death signaling
+        }
+
         void SetForwardAndTurn(Vector3 movement) {
             // convert the world relative moveInput vector into a local-relative
             // turn amount and forward amount required to head in the desired direction.
