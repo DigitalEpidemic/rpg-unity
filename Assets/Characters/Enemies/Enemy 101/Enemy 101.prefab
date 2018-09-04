@@ -2918,6 +2918,7 @@ MonoBehaviour:
   chaseRadius: 6
   patrolPath: {fileID: 0}
   waypointTolerance: 2
+  waypointWaitTime: 0.5
 --- !u!114 &114158546702407284
 MonoBehaviour:
   m_ObjectHideFlags: 1

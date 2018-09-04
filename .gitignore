@@ -45,6 +45,7 @@ sysinfo.txt
 
 # Specific Files
 Assets/Characters/Animations/RPG-Character-Animation-Controller.controller
+Assets/Levels/Jeffs Village/LightingData.asset
 
 # Asset Directories
 # *.* To Ignore Everything Except .cs Extension
@@ -57,3 +58,4 @@ Assets/PolygonDungeon/
 
 # Whitelist .cs Extensions
 !Assets/**/*.cs
+
