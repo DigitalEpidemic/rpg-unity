@@ -3131,6 +3131,7 @@ MonoBehaviour:
   energyBar: {fileID: 0}
   maxEnergyPoints: 100
   regenPointsPerSecond: 3
+  outOfEnergy: {fileID: 8300000, guid: ae18c75e9301afa4fa20b0b350f62f66, type: 3}
 --- !u!114 &114959511921477470
 MonoBehaviour:
   m_ObjectHideFlags: 1

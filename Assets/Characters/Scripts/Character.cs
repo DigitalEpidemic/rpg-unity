@@ -4,9 +4,21 @@ using UnityEngine.AI;
 using RPG.CameraUI; // TODO Consider re-wiring
 
 namespace RPG.Characters {
+    [SelectionBase] // Selects top-level GameObject in editor
     [RequireComponent(typeof(NavMeshAgent))]
-    public class CharacterMovement : MonoBehaviour {
+    public class Character : MonoBehaviour {
 
+        [Header("Capsule Collider Settings")]
+        [SerializeField] Vector3 colliderCenter = new Vector3(0, 1.03f, 0);
+        [SerializeField] float colliderRadius = 0.2f;
+        [SerializeField] float colliderHeight = 2.03f;
+
+        [Header("Setup Settings")]
+        [SerializeField] RuntimeAnimatorController animatorController;
+        [SerializeField] AnimatorOverrideController animatorOverrideController;
+        [SerializeField] Avatar characterAvatar;
+
+        [Header("Movement Properties")]
         [SerializeField] float stoppingDistance = 1f;
         [SerializeField] float moveSpeedMultiplier = 0.7f;
         [SerializeField] float animationSpeedMultiplier = 1.5f;
@@ -22,12 +34,25 @@ namespace RPG.Characters {
         float turnAmount;
         float forwardAmount;
 
+        void Awake() {
+            AddRequiredComponents();
+        }
+
+        private void AddRequiredComponents() {
+            var capsuleCollider = gameObject.AddComponent<CapsuleCollider>();
+            capsuleCollider.center = colliderCenter;
+            capsuleCollider.radius = colliderRadius;
+            capsuleCollider.height = colliderHeight;
+
+            animator = gameObject.AddComponent<Animator>();
+            animator.runtimeAnimatorController = animatorController;
+            animator.avatar = characterAvatar;
+        }
+
         void Start() {
             CameraRaycaster cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
             walkTarget = new GameObject("walkTarget");
-
-            animator = GetComponent<Animator>();
-
+            
             myRigidbody = GetComponent<Rigidbody>();
             myRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 
