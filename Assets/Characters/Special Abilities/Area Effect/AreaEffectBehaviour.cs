@@ -8,6 +8,7 @@ namespace RPG.Characters {
     public class AreaEffectBehaviour : AbilityBehaviour {
 
         public override void Use(GameObject target) {
+            PlayAbilityAnimation();
             PlayAbilitySound();
             DealRadialDamage();
             PlayParticleEffect();

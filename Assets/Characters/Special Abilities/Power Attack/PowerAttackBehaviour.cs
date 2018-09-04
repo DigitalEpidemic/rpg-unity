@@ -7,6 +7,7 @@ namespace RPG.Characters {
 
         public override void Use(GameObject target) {
             PlayAbilitySound();
+            PlayAbilityAnimation();
             DealDamage(target);
             PlayParticleEffect(); // TODO Move to parent class
         }

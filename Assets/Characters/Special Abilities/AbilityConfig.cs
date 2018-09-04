@@ -9,8 +9,9 @@ namespace RPG.Characters {
 
         [Header("Special Ability General")]
         [SerializeField] float energyCost = 10f;
-        [SerializeField] GameObject particlePrefab = null;
-        [SerializeField] AudioClip[] audioClips = null;
+        [SerializeField] GameObject particlePrefab;
+        [SerializeField] AnimationClip abilityAnimation;
+        [SerializeField] AudioClip[] audioClips;
 
         protected AbilityBehaviour behaviour; // Only methods or derived classes can access
 
@@ -36,6 +37,10 @@ namespace RPG.Characters {
 
         public AudioClip GetRandomAbilitySound() {
             return audioClips[Random.Range(0, audioClips.Length)];
+        }
+
+        public AnimationClip GetAbilityAnimation() {
+            return abilityAnimation;
         }
 
     } // AbilityConfig

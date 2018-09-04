@@ -7,6 +7,9 @@ namespace RPG.Characters {
 
         protected AbilityConfig config;
 
+        const string ATTACK_TRIGGER = "Attack";
+        const string DEFAULT_ATTACK_STATE = "DEFAULT ATTACK";
+
         public abstract void Use(GameObject target);
 
         public void SetConfig(AbilityConfig configToSet) {
@@ -24,6 +27,15 @@ namespace RPG.Characters {
             float totalDuration = myParticleSystem.main.duration + myParticleSystem.main.startLifetime.constant; // Fixes duration bug
 
             Destroy(particleObject, totalDuration);
+        }
+
+        protected void PlayAbilityAnimation() {
+            var animatorOverrideController = GetComponent<Character>().GetOverrideController();
+            var animator = GetComponent<Animator>();
+
+            animator.runtimeAnimatorController = animatorOverrideController;
+            animatorOverrideController[DEFAULT_ATTACK_STATE] = config.GetAbilityAnimation();
+            animator.SetTrigger(ATTACK_TRIGGER);
         }
 
         protected void PlayAbilitySound() {
