@@ -3409,7 +3409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
-  animatorOverrideController: {fileID: 22100000, guid: e7dacb2f773f92a4993f74801bfa864b,
+  animatorOverrideController: {fileID: 22100000, guid: 7959d1920f7cb714e9c96ddab34b6e5a,
     type: 2}
   characterAvatar: {fileID: 9000000, guid: b69174d668ba02d44b14a084b217670a, type: 3}
   audioSourceSpatialBlend: 0.5

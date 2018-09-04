@@ -267,10 +267,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4250686074146054}
+  - component: {fileID: 114878895416695168}
   - component: {fileID: 114717565853640450}
   - component: {fileID: 114158546702407284}
   - component: {fileID: 114102838251607908}
-  - component: {fileID: 114878895416695168}
   m_Layer: 0
   m_Name: Enemy 101
   m_TagString: Untagged

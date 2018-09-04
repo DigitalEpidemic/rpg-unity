@@ -2979,8 +2979,8 @@ MonoBehaviour:
   stoppingDistance: 1
   moveSpeedMultiplier: 1
   animationSpeedMultiplier: 1
-  movingTurnSpeed: 360
-  stationaryTurnSpeed: 180
+  movingTurnSpeed: 1000
+  stationaryTurnSpeed: 800
   moveThreshold: 1
   navMeshAgentSteeringSpeed: 1
   navMeshAgentStoppingDistance: 1.3
