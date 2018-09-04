@@ -40,7 +40,13 @@ namespace RPG.Characters {
         }
 
         public AnimationClip GetAbilityAnimation() {
+            RemoveAnimationEvents();
             return abilityAnimation;
+        }
+
+        // Removes bugs/crashes from asset packs
+        void RemoveAnimationEvents() {
+            abilityAnimation.events = new AnimationEvent[0];
         }
 
     } // AbilityConfig
