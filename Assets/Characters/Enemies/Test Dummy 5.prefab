@@ -11,22 +11,6 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1670953482603872}
   m_IsPrefabAsset: 1
---- !u!1 &1081232993744310
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4234185492207740}
-  - component: {fileID: 114304925218086430}
-  m_Layer: 10
-  m_Name: UI Socket
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1093167554114296
 GameObject:
   m_ObjectHideFlags: 1
@@ -263,7 +247,6 @@ GameObject:
   - component: {fileID: 95240503405879474}
   - component: {fileID: 54791850805500504}
   - component: {fileID: 136159669546424128}
-  - component: {fileID: 114123752444065178}
   - component: {fileID: 195395924464702652}
   - component: {fileID: 114204456270808830}
   m_Layer: 10
@@ -461,7 +444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4343929326511690}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4207117478660024
 Transform:
@@ -488,19 +471,6 @@ Transform:
   m_Children:
   - {fileID: 4207117478660024}
   m_Father: {fileID: 4899293220191016}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4234185492207740
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081232993744310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.99, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4343929326511690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4311298167532726
@@ -555,7 +525,6 @@ Transform:
   m_LocalPosition: {x: -58.53, y: 0.91, z: 34.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4234185492207740}
   - {fileID: 4198889958298822}
   - {fileID: 4879582464322640}
   m_Father: {fileID: 0}
@@ -683,7 +652,7 @@ Transform:
   - {fileID: 4313501471823804}
   - {fileID: 4175470726001226}
   m_Father: {fileID: 4343929326511690}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4899293220191016
 Transform:
@@ -766,25 +735,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114123752444065178
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1670953482603872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 1800
-  m_StationaryTurnSpeed: 900
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 1.5
-  m_MoveSpeedMultiplier: 0.5
-  m_AnimSpeedMultiplier: 0.75
-  m_GroundCheckDistance: 1
 --- !u!114 &114204456270808830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -796,29 +746,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d13fb0261fe27b4196d3579fcd11431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 60
   chaseRadius: 3
-  attackRadius: 1.5
-  damagePerShot: 14
-  firingPeriodInSeconds: 0.5
-  firingPeriodVariation: 0.1
-  projectileToUse: {fileID: 1003940279390648, guid: 1a4ad0e466b8ec44fb818c0487efe5a0,
-    type: 2}
-  projectileSocket: {fileID: 1876273568858830}
-  aimOffset: {x: 0, y: 1, z: 0}
---- !u!114 &114304925218086430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081232993744310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1946e1c1bae1c34ba2666ebb3463952, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCanvasPrefab: {fileID: 1311539807392560, guid: 9a9d70d10b9331d469e57254147e0430,
-    type: 2}
+  patrolPath: {fileID: 0}
+  waypointTolerance: 2
 --- !u!136 &136159669546424128
 CapsuleCollider:
   m_ObjectHideFlags: 1

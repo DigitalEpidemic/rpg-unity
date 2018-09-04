@@ -1256,22 +1256,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1972593380310104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4312358280863144}
-  - component: {fileID: 114229654475068146}
-  m_Layer: 10
-  m_Name: UI Socket
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &4004327783013634
 Transform:
   m_ObjectHideFlags: 1
@@ -1311,7 +1295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4355698284541502}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4147778980046060
 Transform:
@@ -1460,19 +1444,6 @@ Transform:
   m_Father: {fileID: 4738746879729016}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4312358280863144
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1972593380310104}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 2.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4355698284541502}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4315547554046172
 Transform:
   m_ObjectHideFlags: 1
@@ -1538,7 +1509,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4652174632598330}
-  - {fileID: 4312358280863144}
   - {fileID: 4050183854790226}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2942,19 +2912,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114229654475068146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1972593380310104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1946e1c1bae1c34ba2666ebb3463952, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCanvasPrefab: {fileID: 1311539807392560, guid: 9a9d70d10b9331d469e57254147e0430,
-    type: 2}
 --- !u!114 &114437790307582424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2966,16 +2923,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d13fb0261fe27b4196d3579fcd11431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 40
   chaseRadius: 8
-  attackRadius: 2
-  damagePerShot: 5
-  firingPeriodInSeconds: 0.5
-  firingPeriodVariation: 0.1
-  projectileToUse: {fileID: 1093317976226508, guid: 6a06fb702074ae148a357b0f74ef672d,
-    type: 2}
-  projectileSocket: {fileID: 1049787214995394}
-  aimOffset: {x: 0, y: 1, z: 0}
+  patrolPath: {fileID: 0}
+  waypointTolerance: 2
 --- !u!136 &136608534893784540
 CapsuleCollider:
   m_ObjectHideFlags: 1

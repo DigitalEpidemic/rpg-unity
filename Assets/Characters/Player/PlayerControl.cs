@@ -51,7 +51,7 @@ namespace RPG.Characters {
             } else if (Input.GetMouseButton(0) && !IsTargetInRange(enemy.gameObject)) {
                 StartCoroutine(MoveAndAttack(enemy));
             } else if (Input.GetMouseButtonDown(1) && IsTargetInRange(enemy.gameObject)) {
-                abilities.AttemptSpecialAbility(0, enemy.gameObject); // TODO Target enemy that was clicked on
+                abilities.AttemptSpecialAbility(0, enemy.gameObject);
             } else if (Input.GetMouseButtonDown(1) && !IsTargetInRange(enemy.gameObject)) {
                 StartCoroutine(MoveAndPowerAttack(enemy));
             }

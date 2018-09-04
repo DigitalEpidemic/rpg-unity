@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// TODO Consider re-wiring
-using RPG.Core;
-
 namespace RPG.Characters {
     public class Projectile : MonoBehaviour {
 
@@ -33,7 +30,7 @@ namespace RPG.Characters {
             }
         }
 
-        // TODO Reimplement
+        // TODO Reimplement projectiles
         //private void DamageIfDamageable(Collision collision) {
         //    Component damageableComponent = collision.gameObject.GetComponent(typeof(IDamageable));
 

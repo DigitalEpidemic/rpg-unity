@@ -71,22 +71,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1091627315350482
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4364081457148114}
-  - component: {fileID: 114164795647270022}
-  m_Layer: 10
-  m_Name: UI Socket
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1112156247060878
 GameObject:
   m_ObjectHideFlags: 1
@@ -174,7 +158,6 @@ GameObject:
   - component: {fileID: 95292385932853646}
   - component: {fileID: 54483397287641918}
   - component: {fileID: 136612214348371710}
-  - component: {fileID: 114524770030295592}
   - component: {fileID: 195967308936247726}
   - component: {fileID: 114431420343693100}
   m_Layer: 10
@@ -405,7 +388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4496766280732746}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4155537578613524
 Transform:
@@ -491,19 +474,6 @@ Transform:
   m_Father: {fileID: 4887987360216382}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4364081457148114
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1091627315350482}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.99, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4496766280732746}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4410714741786346
 Transform:
   m_ObjectHideFlags: 1
@@ -517,7 +487,7 @@ Transform:
   - {fileID: 4893377904146738}
   - {fileID: 4253202660477884}
   m_Father: {fileID: 4496766280732746}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4434641317079948
 Transform:
@@ -556,7 +526,6 @@ Transform:
   m_LocalPosition: {x: -51.75, y: 0.57, z: 39.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4364081457148114}
   - {fileID: 4121881876758206}
   - {fileID: 4410714741786346}
   m_Father: {fileID: 0}
@@ -766,19 +735,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114164795647270022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1091627315350482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1946e1c1bae1c34ba2666ebb3463952, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCanvasPrefab: {fileID: 1311539807392560, guid: 9a9d70d10b9331d469e57254147e0430,
-    type: 2}
 --- !u!114 &114431420343693100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -790,35 +746,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d13fb0261fe27b4196d3579fcd11431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 20
   chaseRadius: 3
-  attackRadius: 1.5
-  damagePerShot: 8
-  firingPeriodInSeconds: 0.5
-  firingPeriodVariation: 0.1
-  projectileToUse: {fileID: 1003940279390648, guid: 1a4ad0e466b8ec44fb818c0487efe5a0,
-    type: 2}
-  projectileSocket: {fileID: 1478642818145492}
-  aimOffset: {x: 0, y: 1, z: 0}
---- !u!114 &114524770030295592
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1338251944359690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 1800
-  m_StationaryTurnSpeed: 900
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 1.5
-  m_MoveSpeedMultiplier: 0.5
-  m_AnimSpeedMultiplier: 0.75
-  m_GroundCheckDistance: 1
+  patrolPath: {fileID: 0}
+  waypointTolerance: 2
 --- !u!136 &136612214348371710
 CapsuleCollider:
   m_ObjectHideFlags: 1
