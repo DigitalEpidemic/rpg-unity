@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
-using RPG.CameraUI; // TODO Consider re-wiring
 
 namespace RPG.Characters {
     [SelectionBase] // Selects top-level GameObject in editor
@@ -76,12 +75,17 @@ namespace RPG.Characters {
                 Move(Vector3.zero);
             }
         }
+
         public void Kill() {
             isAlive = false;
         }
 
         public void SetDestination(Vector3 worldPos) {
             navMeshAgent.destination = worldPos;
+        }
+
+        public AnimatorOverrideController GetOverrideController() {
+            return animatorOverrideController;
         }
 
         void Move(Vector3 movement) {

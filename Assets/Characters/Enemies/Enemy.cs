@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// TODO Consider re-wiring
-using RPG.Core;
-
 namespace RPG.Characters {
-    // TODO Remove interface
     public class Enemy : MonoBehaviour {
         
         [SerializeField] float chaseRadius = 6f;
