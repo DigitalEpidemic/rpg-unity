@@ -38,7 +38,7 @@ namespace RPG.Characters {
         }
 
         void OnTriggerEnter() {
-            FindObjectOfType<Player>().PutWeaponInHand(weaponConfig); // Possibly slows down performance
+            FindObjectOfType<PlayerMovement>().PutWeaponInHand(weaponConfig); // Possibly slows down performance
             audioSource.PlayOneShot(pickUpSFX);
         }
     } // WeaponPickupPoint
