@@ -6,6 +6,7 @@ using UnityEngine;
 using RPG.Core;
 
 namespace RPG.Characters {
+    // TODO Remove interface
     public class Enemy : MonoBehaviour, IDamageable {
         
         [SerializeField] float chaseRadius = 6f;
@@ -25,14 +26,13 @@ namespace RPG.Characters {
 
         void Start() {
             player = FindObjectOfType<Player>();
-            currentHealthPoints = maxHealthPoints;
+        }
+
+        public void TakeDamage(float amount) {
+            // TODO Remove
         }
 
         void Update() {
-            if (player.healthAsPercentage <= Mathf.Epsilon) {
-                StopAllCoroutines();
-                Destroy(this); // To stop enemy behaviour
-            }
 
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
 

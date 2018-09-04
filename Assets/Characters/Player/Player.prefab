@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 5426510}
   - component: {fileID: 13615390}
   - component: {fileID: 195817358988208362}
+  - component: {fileID: 82986906972785610}
   - component: {fileID: 114768375330894030}
   - component: {fileID: 114697968544085642}
   - component: {fileID: 114867043716825538}
-  - component: {fileID: 82986906972785610}
+  - component: {fileID: 114959511921477470}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -3087,22 +3088,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec04b67b4def8f46a5c95b2e60506fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 2000
   baseDamage: 10
   currentWeaponConfig: {fileID: 11400000, guid: 42b20c93823e4e345ab656322c4f0316,
     type: 2}
   animatorOverrideController: {fileID: 22100000, guid: bfdf39bb7aea2c349ae339e2faad31cf,
     type: 2}
-  damageSounds:
-  - {fileID: 8300000, guid: d545be21a524ab24989c2e7a2db866a2, type: 3}
-  - {fileID: 8300000, guid: 475800768578c6944a1ac96baf35008b, type: 3}
-  - {fileID: 8300000, guid: 4a361512c5eb39946af2009f0339325a, type: 3}
-  - {fileID: 8300000, guid: a39682d92ed1bbc438de92e8f508fdc6, type: 3}
-  - {fileID: 8300000, guid: 6f25452c9fcc86f44bed675af415380e, type: 3}
-  deathSounds:
-  - {fileID: 8300000, guid: f62afd35306422a48b0f756b5d3b1eaf, type: 3}
-  - {fileID: 8300000, guid: f279f1f5225b18f4abfe67ab2f75bbfb, type: 3}
-  - {fileID: 8300000, guid: d6e11c72abba2314599440556b2e2618, type: 3}
   criticalHitChance: 0.1
   criticalHitMultiplier: 1.25
   criticalHitParticles: {fileID: 198512729716320528}
@@ -3141,6 +3131,23 @@ MonoBehaviour:
   energyOrb: {fileID: 0}
   maxEnergyPoints: 100
   regenPointsPerSecond: 3
+--- !u!114 &114959511921477470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5641000be84fd4c8c7a4b91068e1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+  healthBar: {fileID: 0}
+  damageSounds: []
+  deathSounds: []
+  deathVanishSeconds: 2
+  currentHealthPoints: 0
 --- !u!137 &137126214482885334
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
