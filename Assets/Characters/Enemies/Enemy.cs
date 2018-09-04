@@ -24,10 +24,6 @@ namespace RPG.Characters {
             player = FindObjectOfType<PlayerMovement>();
         }
 
-        public void TakeDamage(float amount) {
-            // TODO Remove
-        }
-
         void Update() {
 
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);

@@ -131,5 +131,5 @@ namespace RPG.Characters {
             }
         }
 
-    } // CharacterMovement
+    } // Character
 }

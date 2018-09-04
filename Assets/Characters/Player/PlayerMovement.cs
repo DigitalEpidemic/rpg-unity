@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.Assertions;
 using RPG.CameraUI; // For mouse events
 
-// TODO Extract WeaponSystem
 namespace RPG.Characters {
     public class PlayerMovement : MonoBehaviour {
         
@@ -65,5 +63,5 @@ namespace RPG.Characters {
             return distanceToTarget <= weaponSystem.GetCurrentWeapon().GetMaxAttackRange();
         }
 
-    } // Player
+    } // PlayerMovement
 }

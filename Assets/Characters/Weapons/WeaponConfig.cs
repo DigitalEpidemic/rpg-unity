@@ -41,5 +41,5 @@ namespace RPG.Characters {
             attackAnimation.events = new AnimationEvent[0];
         }
 
-    } // Weapon
+    } // WeaponConfig
 }
