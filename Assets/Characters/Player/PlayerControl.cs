@@ -36,6 +36,7 @@ namespace RPG.Characters {
 
         void OnMouseOverPotentiallyWalkable(Vector3 destination) {
             if (Input.GetMouseButton(0)) {
+                weaponSystem.StopAttacking();
                 character.SetDestination(destination);
             }
         }
