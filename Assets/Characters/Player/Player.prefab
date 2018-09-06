@@ -2976,7 +2976,6 @@ MonoBehaviour:
   colliderCenter: {x: 0, y: 1.03, z: 0}
   colliderRadius: 0.2
   colliderHeight: 2.03
-  stoppingDistance: 1
   moveSpeedMultiplier: 1
   animationSpeedMultiplier: 1
   movingTurnSpeed: 1000
@@ -13696,7 +13695,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: a1cacf292229c604abd94352daa4e38c, type: 2}
+  - {fileID: 2100000, guid: 16d765815f00fcc4bba46dbeebc8bdb0, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
