@@ -20,7 +20,6 @@ namespace RPG.Characters {
         [SerializeField] float colliderHeight = 2.03f;
 
         [Header("Movement")]
-        [SerializeField] float stoppingDistance = 1f;
         [SerializeField] float moveSpeedMultiplier = 0.7f;
         [SerializeField] float animationSpeedMultiplier = 1.5f;
         [SerializeField] float movingTurnSpeed = 360;

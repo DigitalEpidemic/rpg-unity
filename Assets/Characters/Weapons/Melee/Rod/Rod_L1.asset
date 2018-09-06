@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adff814645a21c646be1dfcbd09d69e1, type: 3}
-  m_Name: Rod
+  m_Name: Rod_L1
   m_EditorClassIdentifier: 
   gripTransform: {fileID: 4448961376315098, guid: 11458f63dff60aa4aae38d8ccf2570f9,
     type: 2}
   weaponPrefab: {fileID: 1871614424300610, guid: 413c47d84d1a20046911d7de6f977649,
     type: 2}
   attackAnimation: {fileID: 7400000, guid: 61065193c26728447a9b2d420699cc2e, type: 3}
-  minTimeBetweenHits: 1.5
   maxAttackRange: 4
   additionalDamage: 10
+  damageDelay: 0.5

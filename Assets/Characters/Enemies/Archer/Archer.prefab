@@ -410,11 +410,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4653946754613416}
-  - component: {fileID: 114657587142738140}
   - component: {fileID: 114356301328860542}
+  - component: {fileID: 114657587142738140}
   - component: {fileID: 114309269079954874}
   - component: {fileID: 114019094447397634}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,7 +1044,7 @@ GameObject:
   - component: {fileID: 224754710180129766}
   - component: {fileID: 222781733485523620}
   - component: {fileID: 114173508656510676}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3309,10 +3309,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d13fb0261fe27b4196d3579fcd11431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRadius: 6
+  chaseRadius: 2.4
   patrolPath: {fileID: 0}
   waypointTolerance: 2
-  waypointWaitTime: 0.5
+  waypointWaitTime: 2
 --- !u!114 &114173508656510676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3394,7 +3394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5181d7822c88c140868156e1b55627d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 10
+  baseDamage: 22
   currentWeaponConfig: {fileID: 11400000, guid: ab5110447bbbdf14083c099a681c03a4,
     type: 2}
 --- !u!114 &114356301328860542
@@ -3416,11 +3416,10 @@ MonoBehaviour:
   colliderCenter: {x: 0, y: 1.03, z: 0}
   colliderRadius: 0.2
   colliderHeight: 2.03
-  stoppingDistance: 1
   moveSpeedMultiplier: 0.7
-  animationSpeedMultiplier: 1.5
-  movingTurnSpeed: 360
-  stationaryTurnSpeed: 180
+  animationSpeedMultiplier: 1.2
+  movingTurnSpeed: 800
+  stationaryTurnSpeed: 800
   moveThreshold: 1
   navMeshAgentSteeringSpeed: 1
   navMeshAgentStoppingDistance: 1.3
@@ -3478,7 +3477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5641000be84fd4c8c7a4b91068e1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 100
+  maxHealthPoints: 84
   healthBar: {fileID: 114173508656510676}
   damageSounds: []
   deathSounds: []
