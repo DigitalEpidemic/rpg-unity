@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1509873156848818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a61ca53fa166a409d43d8c24f90df6, type: 3}
+  m_Script: {fileID: 11500000, guid: 610f816287df94a478980beb4ea34d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114275608433199098
@@ -2940,7 +2940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 149790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5181d7822c88c140868156e1b55627d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7341c3f319aa54ef1888cf6c6b931929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 10
@@ -2965,7 +2965,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 149790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc842f726bebb4a4da81b5eaf279d165, type: 3}
+  m_Script: {fileID: 11500000, guid: 6905e484db758441ab527b6d31c95fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
@@ -2991,16 +2991,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 149790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3926121322dc35942be6c16f40a8346d, type: 3}
+  m_Script: {fileID: 11500000, guid: eba53ee13d7e248d3a3c24b1b38be0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   abilities:
-  - {fileID: 11400000, guid: 810c0eb6d08a21a44849ea3f74919360, type: 2}
+  - {fileID: 11400000, guid: 60650f107b6958240b81315f31093b76, type: 2}
   - {fileID: 11400000, guid: 2e288e3af717d5f4181a45c55b3d3ba0, type: 2}
   - {fileID: 11400000, guid: 1f59786d393da3a408de4e0fce93bb7d, type: 2}
   energyBar: {fileID: 0}
-  maxEnergyPoints: 100
-  regenPointsPerSecond: 3
+  maxEnergyPoints: 200
+  regenPointsPerSecond: 10
   outOfEnergy: {fileID: 8300000, guid: ae18c75e9301afa4fa20b0b350f62f66, type: 3}
 --- !u!114 &114959511921477470
 MonoBehaviour:
@@ -3010,10 +3010,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 149790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5641000be84fd4c8c7a4b91068e1da, type: 3}
+  m_Script: {fileID: 11500000, guid: 53fb437e61ff0493b8734b859139a188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 100
+  maxHealthPoints: 360
   healthBar: {fileID: 0}
   damageSounds:
   - {fileID: 8300000, guid: d545be21a524ab24989c2e7a2db866a2, type: 3}
