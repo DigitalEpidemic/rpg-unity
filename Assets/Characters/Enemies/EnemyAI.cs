@@ -41,7 +41,10 @@ namespace RPG.Characters {
             if (inWeaponRadius) {
                 StopAllCoroutines();
                 state = State.attacking;
+                transform.LookAt(player.gameObject.transform);
                 weaponSystem.AttackTarget(player.gameObject);
+                character.GetNavMeshAgent().Move(Vector3.zero);
+                character.GetNavMeshAgent().velocity = Vector3.zero;
             }
 
             if (outsideChaseRadius) {

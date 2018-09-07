@@ -81,6 +81,10 @@ namespace RPG.Characters {
             }
         }
 
+        public NavMeshAgent GetNavMeshAgent() {
+            return navMeshAgent;
+        }
+
         public void Kill() {
             isAlive = false;
         }

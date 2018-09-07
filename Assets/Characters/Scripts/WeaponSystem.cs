@@ -25,7 +25,7 @@ namespace RPG.Characters {
             PutWeaponInHand(currentWeaponConfig);
             SetAttackAnimation();
         }
-        
+
         void Update() {
             bool targetIsDead;
             bool targetIsOutOfRange;
@@ -46,6 +46,10 @@ namespace RPG.Characters {
 
             if (characterIsDead || targetIsOutOfRange || targetIsDead) {
                 StopAllCoroutines();
+            }
+
+            if (target && !targetIsDead) {
+                transform.LookAt(target.transform);
             }
         }
 
@@ -135,6 +139,7 @@ namespace RPG.Characters {
                 animator.SetTrigger(ATTACK_TRIGGER);
                 lastHitTime = Time.time;
             }
+            transform.LookAt(target.gameObject.transform);
         }
 
         private float CalculateDamage() {
