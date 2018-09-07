@@ -26,8 +26,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149790}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.53, y: 0.1, z: 14.96}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -67.46, y: 9.92, z: -70.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4607173221663320}
@@ -636,7 +636,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4121270537244324}
-  - component: {fileID: 114105878688923216}
   m_Layer: 0
   m_Name: Hand_R
   m_TagString: Untagged
@@ -1159,6 +1158,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1839808880164860
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4868376482844802}
+  - component: {fileID: 114482854793440548}
+  m_Layer: 0
+  m_Name: Grip Scaler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1870413673709804
 GameObject:
   m_ObjectHideFlags: 1
@@ -1434,6 +1449,7 @@ Transform:
   - {fileID: 4823153710930724}
   - {fileID: 4089527538428296}
   - {fileID: 4684562184802010}
+  - {fileID: 4868376482844802}
   m_Father: {fileID: 4927224990353608}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2254,6 +2270,19 @@ Transform:
   m_Father: {fileID: 4607173221663320}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4868376482844802
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1839808880164860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_Children: []
+  m_Father: {fileID: 4121270537244324}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4896084427873562
 Transform:
   m_ObjectHideFlags: 1
@@ -2921,17 +2950,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1352643265400002}
   m_Mesh: {fileID: 4300018, guid: b69174d668ba02d44b14a084b217670a, type: 3}
---- !u!114 &114105878688923216
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1509873156848818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610f816287df94a478980beb4ea34d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114275608433199098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2944,8 +2962,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 10
-  currentWeaponConfig: {fileID: 11400000, guid: a76567a48dcdf1d43ad03c5b543d1a70,
+  currentWeaponConfig: {fileID: 11400000, guid: 3996ac0c313e31945877165a37faa7ac,
     type: 2}
+--- !u!114 &114482854793440548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1839808880164860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610f816287df94a478980beb4ea34d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114697968544085642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2972,6 +3001,7 @@ MonoBehaviour:
   animatorOverrideController: {fileID: 22100000, guid: bfdf39bb7aea2c349ae339e2faad31cf,
     type: 2}
   characterAvatar: {fileID: 9000000, guid: b69174d668ba02d44b14a084b217670a, type: 3}
+  animatorForwardCap: 1
   audioSourceSpatialBlend: 0.5
   colliderCenter: {x: 0, y: 1.03, z: 0}
   colliderRadius: 0.2
