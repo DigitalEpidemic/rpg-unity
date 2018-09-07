@@ -55,7 +55,7 @@ namespace RPG.Characters {
                 weaponSystem.StopAttacking();
                 StartCoroutine(ChasePlayer());
             }
-            
+
         }
 
         IEnumerator Patrol() {

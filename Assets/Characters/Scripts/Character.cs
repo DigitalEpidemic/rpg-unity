@@ -36,6 +36,7 @@ namespace RPG.Characters {
         NavMeshAgent navMeshAgent;
         Animator animator;
         Rigidbody myRigidbody;
+        CapsuleCollider capsuleCollider;
         float turnAmount;
         float forwardAmount;
         bool isAlive = true;
@@ -45,7 +46,7 @@ namespace RPG.Characters {
         }
 
         private void AddRequiredComponents() {
-            var capsuleCollider = gameObject.AddComponent<CapsuleCollider>();
+            capsuleCollider = gameObject.AddComponent<CapsuleCollider>();
             capsuleCollider.center = colliderCenter;
             capsuleCollider.radius = colliderRadius;
             capsuleCollider.height = colliderHeight;
@@ -69,7 +70,11 @@ namespace RPG.Characters {
         }
 
         void Update() {
-            if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance && isAlive) {
+            FixDeadSliding();
+
+            if (!navMeshAgent.isOnNavMesh) {
+                Debug.LogError(gameObject.name + " is not on the NavMesh!");
+            } else if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance && isAlive) {
                 Move(navMeshAgent.desiredVelocity);
             } else {
                 Move(Vector3.zero);
@@ -98,7 +103,7 @@ namespace RPG.Characters {
             ApplyExtraTurnRotation();
             UpdateAnimator();
         }
-        
+
         void SetForwardAndTurn(Vector3 movement) {
             // convert the world relative moveInput vector into a local-relative
             // turn amount and forward amount required to head in the desired direction.
@@ -132,6 +137,15 @@ namespace RPG.Characters {
                 // we preserve the existing y part of the current velocity.
                 velocity.y = myRigidbody.velocity.y;
                 myRigidbody.velocity = velocity;
+            }
+        }
+
+        void FixDeadSliding() {
+            if (!isAlive) {
+                navMeshAgent.isStopped = true;
+                navMeshAgent.velocity = Vector3.zero;
+                navMeshAgent.Move(Vector3.zero);
+                capsuleCollider.radius = 0f;
             }
         }
 
