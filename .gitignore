@@ -42,6 +42,8 @@ sysinfo.txt
 *.wav.meta
 *.blend
 *.blend.meta
+*.ogg
+*.ogg.meta
 
 # Specific Files
 Assets/Characters/Animations/RPG-Character-Animation-Controller.controller

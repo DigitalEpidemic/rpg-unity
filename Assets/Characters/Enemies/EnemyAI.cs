@@ -38,9 +38,15 @@ namespace RPG.Characters {
             bool inChaseRadius = distanceToPlayer > currentWeaponRange && distanceToPlayer <= chaseRadius;
             bool outsideChaseRadius = distanceToPlayer > chaseRadius;
 
+            if (inWeaponRadius) {
+                StopAllCoroutines();
+                state = State.attacking;
+                weaponSystem.AttackTarget(player.gameObject);
+            }
+
             if (outsideChaseRadius) {
                 StopAllCoroutines();
-                weaponSystem.StopAttacking();
+                //weaponSystem.StopAttacking();
                 StartCoroutine(Patrol());
             }
 
@@ -49,12 +55,7 @@ namespace RPG.Characters {
                 weaponSystem.StopAttacking();
                 StartCoroutine(ChasePlayer());
             }
-
-            if (inWeaponRadius) {
-                StopAllCoroutines();
-                state = State.attacking;
-                weaponSystem.AttackTarget(player.gameObject);
-            }
+            
         }
 
         IEnumerator Patrol() {
