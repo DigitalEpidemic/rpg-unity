@@ -9,7 +9,7 @@ public class AudioTrigger : MonoBehaviour {
 
     bool hasPlayed = false;
     AudioSource audioSource;
-    GameObject player; // will only trigger on distance to player
+    GameObject player; // Will only trigger on distance to player
 
     void Start() {
         audioSource = gameObject.AddComponent<AudioSource>();

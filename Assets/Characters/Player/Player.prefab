@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 114867043716825538}
   - component: {fileID: 114959511921477470}
   - component: {fileID: 114275608433199098}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -26,16 +26,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149790}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.46, y: 9.92, z: -70.79}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.9215323, z: -0, w: 0.388302}
+  m_LocalPosition: {x: 19.24, y: 9.66, z: -102.16}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_Children:
   - {fileID: 4607173221663320}
   - {fileID: 4009634453371030}
   - {fileID: 4906263950938948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -134.302, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 4906263950938948}
   - component: {fileID: 198512729716320528}
   - component: {fileID: 199124853016974318}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Critical Hit Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
