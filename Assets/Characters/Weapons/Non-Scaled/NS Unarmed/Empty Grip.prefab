@@ -9,31 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1246042005740542}
+  m_RootGameObject: {fileID: 1960554427726766}
   m_IsPrefabAsset: 1
---- !u!1 &1246042005740542
+--- !u!1 &1960554427726766
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4219815134937942}
+  - component: {fileID: 4174503452276102}
   m_Layer: 0
-  m_Name: Sword Grip
+  m_Name: Empty Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4219815134937942
+--- !u!4 &4174503452276102
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1246042005740542}
-  m_LocalRotation: {x: 0.16791345, y: 0.74863034, z: 0.24270438, w: 0.5936769}
-  m_LocalPosition: {x: 0.139, y: 0.101, z: 0.02}
+  m_GameObject: {fileID: 1960554427726766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

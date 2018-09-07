@@ -267,10 +267,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4250686074146054}
-  - component: {fileID: 114878895416695168}
-  - component: {fileID: 114717565853640450}
-  - component: {fileID: 114158546702407284}
-  - component: {fileID: 114102838251607908}
+  - component: {fileID: 114917374377042318}
+  - component: {fileID: 114974230779063798}
+  - component: {fileID: 114717842054813586}
+  - component: {fileID: 114690336047993532}
   m_Layer: 0
   m_Name: Enemy 101
   m_TagString: Untagged
@@ -1530,7 +1530,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1179042466001294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.12, y: 0.1, z: 13.73}
+  m_LocalPosition: {x: 21.538544, y: 9.613625, z: -88.110596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4096547403008536}
@@ -2904,35 +2904,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1499804751799668}
   m_Mesh: {fileID: 4300042, guid: b69174d668ba02d44b14a084b217670a, type: 3}
---- !u!114 &114102838251607908
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1179042466001294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d13fb0261fe27b4196d3579fcd11431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseRadius: 6
-  patrolPath: {fileID: 0}
-  waypointTolerance: 2
-  waypointWaitTime: 0.5
---- !u!114 &114158546702407284
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1179042466001294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5181d7822c88c140868156e1b55627d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseDamage: 10
-  currentWeaponConfig: {fileID: 11400000, guid: 40dbc0f2bb8057a4e9caab965ee423d4,
-    type: 2}
 --- !u!114 &114279025684724826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2968,7 +2939,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241431241790948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1946e1c1bae1c34ba2666ebb3463952, type: 3}
+  m_Script: {fileID: 11500000, guid: 630ffc6aa06e74ff195c3cddcb693c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114486369731292842
@@ -2995,10 +2966,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1726654761677714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a61ca53fa166a409d43d8c24f90df6, type: 3}
+  m_Script: {fileID: 11500000, guid: 610f816287df94a478980beb4ea34d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114717565853640450
+--- !u!114 &114690336047993532
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3006,25 +2977,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1179042466001294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc842f726bebb4a4da81b5eaf279d165, type: 3}
+  m_Script: {fileID: 11500000, guid: 00c0d59b827694847a96196a4b2f7957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
-  animatorOverrideController: {fileID: 22100000, guid: e7dacb2f773f92a4993f74801bfa864b,
+  chaseRadius: 6
+  patrolPath: {fileID: 0}
+  waypointTolerance: 2
+  waypointWaitTime: 0.5
+--- !u!114 &114717842054813586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179042466001294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7341c3f319aa54ef1888cf6c6b931929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 10
+  currentWeaponConfig: {fileID: 11400000, guid: 49f03de14f0daf74ea8f5c5ab4a12052,
     type: 2}
-  characterAvatar: {fileID: 9000000, guid: b69174d668ba02d44b14a084b217670a, type: 3}
-  audioSourceSpatialBlend: 0.5
-  colliderCenter: {x: 0, y: 1.03, z: 0}
-  colliderRadius: 0.2
-  colliderHeight: 2.03
-  stoppingDistance: 1
-  moveSpeedMultiplier: 1
-  animationSpeedMultiplier: 1
-  movingTurnSpeed: 360
-  stationaryTurnSpeed: 180
-  moveThreshold: 1
-  navMeshAgentSteeringSpeed: 1
-  navMeshAgentStoppingDistance: 1.3
 --- !u!114 &114765743967266104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3073,7 +3046,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114878895416695168
+--- !u!114 &114917374377042318
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3081,21 +3054,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1179042466001294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5641000be84fd4c8c7a4b91068e1da, type: 3}
+  m_Script: {fileID: 11500000, guid: 6905e484db758441ab527b6d31c95fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorController: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  animatorOverrideController: {fileID: 22100000, guid: e7dacb2f773f92a4993f74801bfa864b,
+    type: 2}
+  characterAvatar: {fileID: 9000000, guid: b69174d668ba02d44b14a084b217670a, type: 3}
+  audioSourceSpatialBlend: 0.5
+  colliderCenter: {x: 0, y: 1.03, z: 0}
+  colliderRadius: 0.2
+  colliderHeight: 2.03
+  moveSpeedMultiplier: 0.7
+  animationSpeedMultiplier: 1.5
+  movingTurnSpeed: 360
+  stationaryTurnSpeed: 180
+  moveThreshold: 1
+  navMeshAgentSteeringSpeed: 1
+  navMeshAgentStoppingDistance: 1.3
+--- !u!114 &114974230779063798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179042466001294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53fb437e61ff0493b8734b859139a188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 100
   healthBar: {fileID: 114279025684724826}
-  damageSounds:
-  - {fileID: 8300000, guid: d545be21a524ab24989c2e7a2db866a2, type: 3}
-  - {fileID: 8300000, guid: 475800768578c6944a1ac96baf35008b, type: 3}
-  - {fileID: 8300000, guid: 4a361512c5eb39946af2009f0339325a, type: 3}
-  - {fileID: 8300000, guid: a39682d92ed1bbc438de92e8f508fdc6, type: 3}
-  - {fileID: 8300000, guid: 6f25452c9fcc86f44bed675af415380e, type: 3}
-  deathSounds:
-  - {fileID: 8300000, guid: f62afd35306422a48b0f756b5d3b1eaf, type: 3}
-  - {fileID: 8300000, guid: f279f1f5225b18f4abfe67ab2f75bbfb, type: 3}
-  - {fileID: 8300000, guid: d6e11c72abba2314599440556b2e2618, type: 3}
+  damageSounds: []
+  deathSounds: []
   deathVanishSeconds: 2
 --- !u!137 &137048490508753806
 SkinnedMeshRenderer:

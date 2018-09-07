@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adff814645a21c646be1dfcbd09d69e1, type: 3}
+  m_Name: NS_Spear_L0
+  m_EditorClassIdentifier: 
+  gripTransform: {fileID: 4978388988307128, guid: af183a6f245ef1849bab78549af71f4a,
+    type: 2}
+  weaponPrefab: {fileID: 124464, guid: bc97a13f46e9e7b4d8d2bfa40fcdc1e4, type: 2}
+  attackAnimation: {fileID: 7400000, guid: 27eda9f3f990c6840a532a06a17f6e15, type: 3}
+  maxAttackRange: 2.2
+  additionalDamage: 0
+  damageDelay: 0.8

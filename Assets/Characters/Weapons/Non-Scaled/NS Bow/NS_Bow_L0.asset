@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adff814645a21c646be1dfcbd09d69e1, type: 3}
+  m_Name: NS_Bow_L0
+  m_EditorClassIdentifier: 
+  gripTransform: {fileID: 4978388988307128, guid: 1d490448e5920cf40b62804ed3299d7f,
+    type: 2}
+  weaponPrefab: {fileID: 1563655986059756, guid: 7fc9ab5f4b455394196c002f76c7b15b,
+    type: 2}
+  attackAnimation: {fileID: 7400000, guid: 24d693751e9fd0b42ba8f9595d8b5f5e, type: 3}
+  maxAttackRange: 6
+  additionalDamage: 0
+  damageDelay: 1.5
