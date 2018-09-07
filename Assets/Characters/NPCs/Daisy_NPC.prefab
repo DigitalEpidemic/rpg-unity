@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 114397249846641100}
   - component: {fileID: 114913961221886952}
   - component: {fileID: 114947716196989140}
+  - component: {fileID: 114060887843399920}
   m_Layer: 2
   m_Name: Daisy_NPC
   m_TagString: Untagged
@@ -3750,6 +3751,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610f816287df94a478980beb4ea34d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114060887843399920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243272615349166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a666aa700f10b141b648b69dd714a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 0e202488e8943e24dbc228cc66ea2809, type: 3}
+  playerDistanceThreshold: 5
+  isOneTimeOnly: 1
 --- !u!114 &114207477411623962
 MonoBehaviour:
   m_ObjectHideFlags: 1
