@@ -41,7 +41,9 @@ namespace RPG.Characters {
 
         // Removes bugs/crashes from asset packs
         private void RemoveAnimationEvents() {
-            attackAnimation.events = new AnimationEvent[0];
+            if (attackAnimation) {
+                attackAnimation.events = new AnimationEvent[0];
+            }
         }
 
     } // WeaponConfig
