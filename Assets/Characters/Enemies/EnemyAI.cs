@@ -22,7 +22,10 @@ namespace RPG.Characters {
         int nextWaypointIndex;
 
         enum State { idle, patrolling, attacking, chasing }
+#pragma warning disable 0414
         State state = State.idle;
+#pragma warning restore 0414
+
 
         void Start() {
             player = FindObjectOfType<PlayerControl>();
