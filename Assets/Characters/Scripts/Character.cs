@@ -30,6 +30,7 @@ namespace RPG.Characters {
         [Header("Nav Mesh Agent")]
         [SerializeField] float navMeshAgentSteeringSpeed = 1.0f;
         [SerializeField] float navMeshAgentStoppingDistance = 1.3f;
+        [SerializeField] float obstacleAvoidanceRadius = 0.5f;
 
         Vector3 clickPoint;
         GameObject walkTarget;
@@ -64,6 +65,7 @@ namespace RPG.Characters {
             navMeshAgent = gameObject.AddComponent<NavMeshAgent>();
             navMeshAgent.speed = navMeshAgentSteeringSpeed;
             navMeshAgent.stoppingDistance = navMeshAgentStoppingDistance;
+            navMeshAgent.radius = obstacleAvoidanceRadius;
             navMeshAgent.autoBraking = false;
             navMeshAgent.updateRotation = false;
             navMeshAgent.updatePosition = true;

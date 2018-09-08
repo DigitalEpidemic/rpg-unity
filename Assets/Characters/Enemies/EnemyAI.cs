@@ -12,7 +12,7 @@ namespace RPG.Characters {
         [SerializeField] float chaseRadius = 6f;
         [SerializeField] WaypointContainer patrolPath;
         [SerializeField] float waypointTolerance = 2f;
-        [SerializeField] float waypointWaitTime = 0.5f;
+        [SerializeField] float waypointWaitTime = 2f;
 
         PlayerControl player;
         Character character;
