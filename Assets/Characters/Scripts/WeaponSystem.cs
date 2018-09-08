@@ -14,10 +14,13 @@ namespace RPG.Characters {
         GameObject target;
         GameObject weaponObject;
         float lastHitTime;
+        bool lookAtEnemy;
 
         const string ATTACK_TRIGGER = "Attack";
         const string DEFAULT_ATTACK = "DEFAULT ATTACK";
-        
+        const string PLAYER_NAME = "Player";
+
+
         void Start() {
             animator = GetComponent<Animator>();
             character = GetComponent<Character>();
@@ -39,6 +42,13 @@ namespace RPG.Characters {
 
                 var distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
                 targetIsOutOfRange = distanceToTarget > currentWeaponConfig.GetMaxAttackRange();
+
+                if (lookAtEnemy && !targetIsOutOfRange && !targetIsDead) {
+                    Vector3 targetPosition = new Vector3(target.transform.position.x,
+                                       transform.position.y,
+                                       target.transform.position.z);
+                    transform.LookAt(targetPosition);
+                }
             }
 
             float characterHealth = GetComponent<HealthSystem>().healthAsPercentage;
@@ -46,10 +56,6 @@ namespace RPG.Characters {
 
             if (characterIsDead || targetIsOutOfRange || targetIsDead) {
                 StopAllCoroutines();
-            }
-
-            if (target && !targetIsDead) {
-                transform.LookAt(target.transform);
             }
         }
 
@@ -64,11 +70,21 @@ namespace RPG.Characters {
         }
 
         public void AttackTarget(GameObject targetToAttack) {
+            if (gameObject.name == PLAYER_NAME && gameObject.GetComponent<PlayerControl>() != null) {
+                PlayerControl playerControl = GetComponent<PlayerControl>();
+                playerControl.isAttacking = true;
+            }
+            
             target = targetToAttack;
             StartCoroutine(AttackTargetRepeatedly());
         }
 
         public void StopAttacking() {
+            if (gameObject.name == PLAYER_NAME && gameObject.GetComponent<PlayerControl>() != null) {
+                PlayerControl playerControl = GetComponent<PlayerControl>();
+                playerControl.isAttacking = false;
+            }
+            lookAtEnemy = false;
             animator.StopPlayback();
             StopAllCoroutines();
         }
@@ -80,7 +96,7 @@ namespace RPG.Characters {
             while (attackerStillAlive && targetStillAlive) {
                 //float weaponHitRate = currentWeaponConfig.GetTimeBetweenAnimationCycles();
                 //float timeToWait = weaponHitRate * character.GetAnimSpeedMultiplier();
-
+                
                 var animationClip = currentWeaponConfig.GetAttackAnimClip();
                 float animationClipTime = animationClip.length / character.GetAnimSpeedMultiplier();
                 float timeToWait = animationClipTime + currentWeaponConfig.GetTimeBetweenAnimationCycles();
@@ -97,7 +113,7 @@ namespace RPG.Characters {
         }
 
         private void AttackTargetOnce() {
-            transform.LookAt(target.transform);
+            lookAtEnemy = true;
             animator.SetTrigger(ATTACK_TRIGGER);
             float damageDelay = currentWeaponConfig.GetDamageDelay();
             SetAttackAnimation();

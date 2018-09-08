@@ -8,6 +8,9 @@ namespace RPG.Characters {
         SpecialAbilities abilities;
         WeaponSystem weaponSystem;
         
+        GameObject updatedTarget;
+        public bool isAttacking;
+        
         void Start() {
             character = GetComponent<Character>();
             abilities = GetComponent<SpecialAbilities>();
@@ -24,6 +27,10 @@ namespace RPG.Characters {
 
         void Update() {
             ScanForAbilityKeyDown();
+
+            if (isAttacking && updatedTarget && updatedTarget.transform.hasChanged) {
+                character.SetDestination(updatedTarget.transform.position);
+            }
         }
 
         void ScanForAbilityKeyDown() {
@@ -42,6 +49,7 @@ namespace RPG.Characters {
         }
 
         bool IsTargetInRange(GameObject target) {
+            updatedTarget = target;
             float distanceToTarget = (target.transform.position - transform.position).magnitude;
             return distanceToTarget <= weaponSystem.GetCurrentWeapon().GetMaxAttackRange();
         }
@@ -59,6 +67,7 @@ namespace RPG.Characters {
         }
 
         IEnumerator MoveToTarget(GameObject target) {
+            updatedTarget = target;
             character.SetDestination(target.transform.position);
             while (!IsTargetInRange(target)) {
                 yield return new WaitForEndOfFrame();
@@ -67,11 +76,14 @@ namespace RPG.Characters {
         }
 
         IEnumerator MoveAndAttack(EnemyAI enemy) {
+            updatedTarget = enemy.gameObject;
+            weaponSystem.StopAttacking();
             yield return StartCoroutine(MoveToTarget(enemy.gameObject));
             weaponSystem.AttackTarget(enemy.gameObject);
         }
 
         IEnumerator MoveAndPowerAttack(EnemyAI enemy) {
+            updatedTarget = enemy.gameObject;
             yield return StartCoroutine(MoveToTarget(enemy.gameObject));
             abilities.AttemptSpecialAbility(0, enemy.gameObject);
         }
