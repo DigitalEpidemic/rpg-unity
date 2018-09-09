@@ -74,7 +74,7 @@ namespace RPG.Characters {
                 PlayerControl playerControl = GetComponent<PlayerControl>();
                 playerControl.isAttacking = true;
             }
-            
+
             target = targetToAttack;
             StartCoroutine(AttackTargetRepeatedly());
         }
@@ -96,7 +96,7 @@ namespace RPG.Characters {
             while (attackerStillAlive && targetStillAlive) {
                 //float weaponHitRate = currentWeaponConfig.GetTimeBetweenAnimationCycles();
                 //float timeToWait = weaponHitRate * character.GetAnimSpeedMultiplier();
-                
+
                 var animationClip = currentWeaponConfig.GetAttackAnimClip();
                 float animationClipTime = animationClip.length / character.GetAnimSpeedMultiplier();
                 float timeToWait = animationClipTime + currentWeaponConfig.GetTimeBetweenAnimationCycles();
@@ -140,22 +140,13 @@ namespace RPG.Characters {
             animator.runtimeAnimatorController = animatorOverrideController;
             animatorOverrideController[DEFAULT_ATTACK] = currentWeaponConfig.GetAttackAnimClip();
         }
-        
+
         private GameObject RequestDominantHand() {
             var dominantHands = GetComponentsInChildren<DominantHand>();
             int numberOfDominantHands = dominantHands.Length;
             Assert.IsFalse(numberOfDominantHands <= 0, "No DominantHand script found on " + gameObject.name + ", please add one!");
             Assert.IsFalse(numberOfDominantHands > 1, "Multiple DominantHand scripts found on " + gameObject.name + ", please remove one!");
             return dominantHands[0].gameObject;
-        }
-        
-        private void AttackTarget() {
-            if (Time.time - lastHitTime > currentWeaponConfig.GetTimeBetweenAnimationCycles()) {
-                SetAttackAnimation();
-                animator.SetTrigger(ATTACK_TRIGGER);
-                lastHitTime = Time.time;
-            }
-            transform.LookAt(target.gameObject.transform);
         }
 
         private float CalculateDamage() {

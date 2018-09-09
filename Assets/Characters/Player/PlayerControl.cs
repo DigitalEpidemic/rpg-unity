@@ -7,7 +7,7 @@ namespace RPG.Characters {
         Character character;
         SpecialAbilities abilities;
         WeaponSystem weaponSystem;
-        
+
         GameObject updatedTarget;
         public bool isAttacking;
 
@@ -77,7 +77,7 @@ namespace RPG.Characters {
 
         IEnumerator MoveAndAttack(EnemyAI enemy) {
             updatedTarget = enemy.gameObject;
-            weaponSystem.StopAttacking();
+            //weaponSystem.StopAttacking();
             yield return StartCoroutine(MoveToTarget(enemy.gameObject));
             weaponSystem.AttackTarget(enemy.gameObject);
         }
