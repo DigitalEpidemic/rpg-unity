@@ -58,7 +58,7 @@ Assets/Characters/Animations/
 Assets/Asset Packs - For Students/
 Assets/Asset Packs - Not For Commercial Use/
 Assets/PolygonDungeon/
-Assets/Characters/Enemies/GameDev/
+Assets/Characters/GameDev/
 
 # Whitelist .cs Extensions
 !Assets/**/*.cs
