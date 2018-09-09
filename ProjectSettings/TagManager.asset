@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collide
+  - CaptionUI
   layers:
   - Default
   - TransparentFX

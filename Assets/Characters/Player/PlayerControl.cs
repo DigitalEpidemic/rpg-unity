@@ -10,7 +10,7 @@ namespace RPG.Characters {
         
         GameObject updatedTarget;
         public bool isAttacking;
-        
+
         void Start() {
             character = GetComponent<Character>();
             abilities = GetComponent<SpecialAbilities>();
@@ -55,9 +55,9 @@ namespace RPG.Characters {
         }
 
         void OnMouseOverEnemy(EnemyAI enemy) {
-            if (Input.GetMouseButton(0) && IsTargetInRange(enemy.gameObject)) {
+            if (Input.GetMouseButtonDown(0) && IsTargetInRange(enemy.gameObject)) {
                 weaponSystem.AttackTarget(enemy.gameObject);
-            } else if (Input.GetMouseButton(0) && !IsTargetInRange(enemy.gameObject)) {
+            } else if (Input.GetMouseButtonDown(0) && !IsTargetInRange(enemy.gameObject)) {
                 StartCoroutine(MoveAndAttack(enemy));
             } else if (Input.GetMouseButtonDown(1) && IsTargetInRange(enemy.gameObject)) {
                 abilities.AttemptSpecialAbility(0, enemy.gameObject);

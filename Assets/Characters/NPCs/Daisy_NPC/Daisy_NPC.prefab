@@ -3765,6 +3765,9 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 0e202488e8943e24dbc228cc66ea2809, type: 3}
   playerDistanceThreshold: 5
   isOneTimeOnly: 1
+  captionText: Please, sir! Help me find my husband. He went to find food and hasn't
+    returned. He's wearing a stupid yellow vest.
+  captionLengthSeconds: 10
 --- !u!114 &114207477411623962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3924,16 +3927,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
-  animatorOverrideController: {fileID: 22100000, guid: 4d89e7841a8d36c499ebc3e7a8339b2e,
+  animatorOverrideController: {fileID: 22100000, guid: adacb05fdaba1c641ad5efb8945c9051,
     type: 2}
   characterAvatar: {fileID: 9000000, guid: b69174d668ba02d44b14a084b217670a, type: 3}
-  animatorForwardCap: 0.5
+  animatorForwardCap: 1
   audioSourceSpatialBlend: 0.5
   colliderCenter: {x: 0, y: 1.03, z: 0}
   colliderRadius: 0.2
   colliderHeight: 2.03
-  moveSpeedMultiplier: 1
-  animationSpeedMultiplier: 1
+  moveSpeedMultiplier: 0.8
+  animationSpeedMultiplier: 0.6
   movingTurnSpeed: 360
   stationaryTurnSpeed: 180
   moveThreshold: 1
