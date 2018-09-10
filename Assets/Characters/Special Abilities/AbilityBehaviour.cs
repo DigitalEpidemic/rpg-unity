@@ -29,6 +29,20 @@ namespace RPG.Characters {
             Destroy(particleObject, totalDuration);
         }
 
+        protected void PlayFireBlastEffect() {
+            var particlePrefab = config.GetParticlePrefab();
+            var particleLocation = GameObject.Find("FireBlastLocation");
+            var particleObject = Instantiate(particlePrefab, particleLocation.transform.position, transform.rotation);
+
+            particleObject.transform.parent = transform; // Set world space in prefab if required
+            ParticleSystem myParticleSystem = particleObject.GetComponent<ParticleSystem>();
+            myParticleSystem.Play();
+
+            float totalDuration = myParticleSystem.main.duration + myParticleSystem.main.startLifetime.constant; // Fixes duration bug
+
+            Destroy(particleObject, totalDuration);
+        }
+
         protected void PlayAbilityAnimation() {
             var animatorOverrideController = GetComponent<Character>().GetOverrideController();
             var animator = GetComponent<Animator>();

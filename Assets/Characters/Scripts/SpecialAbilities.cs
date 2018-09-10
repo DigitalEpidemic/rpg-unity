@@ -13,6 +13,7 @@ namespace RPG.Characters {
 
         float currentEnergyPoints;
         AudioSource audioSource;
+        PlayerControl playerControl;
 
         float EnergyAsPercent() {
             return currentEnergyPoints / maxEnergyPoints;
@@ -20,6 +21,7 @@ namespace RPG.Characters {
 
         void Start() {
             audioSource = GetComponent<AudioSource>();
+            playerControl = GetComponent<PlayerControl>();
 
             currentEnergyPoints = maxEnergyPoints;
             AttachInitialAbilities();
@@ -37,6 +39,10 @@ namespace RPG.Characters {
             return abilities.Length;
         }
 
+        public bool GetRequiresTarget(int abilityIndex) {
+            return abilities[abilityIndex].GetRequiresTarget();
+        }
+
         public void ConsumeEnergy(float amount) {
             float newEnergyPoints = currentEnergyPoints - amount;
             currentEnergyPoints = Mathf.Clamp(newEnergyPoints, 0, maxEnergyPoints);
@@ -48,6 +54,7 @@ namespace RPG.Characters {
 
             if (energyCost <= currentEnergyPoints) {
                 ConsumeEnergy(energyCost);
+                playerControl.isAttacking = true;
                 abilities[abilityIndex].Use(target);
             } else {
                 audioSource.PlayOneShot(outOfEnergy);

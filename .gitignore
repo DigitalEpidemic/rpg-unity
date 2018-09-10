@@ -59,7 +59,8 @@ Assets/Asset Packs - For Students/
 Assets/Asset Packs - Not For Commercial Use/
 Assets/PolygonDungeon/
 Assets/Characters/GameDev/
+Assets/NeatWolf/ParticleFX03/
+Assets/Standard Assets/
 
 # Whitelist .cs Extensions
 !Assets/**/*.cs
-

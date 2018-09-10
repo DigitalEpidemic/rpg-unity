@@ -12,6 +12,7 @@ namespace RPG.Characters {
         [SerializeField] GameObject particlePrefab;
         [SerializeField] AnimationClip abilityAnimation;
         [SerializeField] AudioClip[] audioClips;
+        [SerializeField] bool requiresTarget;
 
         protected AbilityBehaviour behaviour; // Only methods or derived classes can access
 
@@ -37,6 +38,10 @@ namespace RPG.Characters {
 
         public AudioClip GetRandomAbilitySound() {
             return audioClips[Random.Range(0, audioClips.Length)];
+        }
+
+        public bool GetRequiresTarget() {
+            return requiresTarget;
         }
 
         public AnimationClip GetAbilityAnimation() {

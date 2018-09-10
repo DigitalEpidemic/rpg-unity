@@ -34,8 +34,8 @@ namespace RPG.Characters {
         }
 
         void ScanForAbilityKeyDown() {
-            for (int keyIndex = 1; keyIndex < abilities.GetNumberOfAbilities(); keyIndex++) {
-                if (Input.GetKeyDown(keyIndex.ToString())) {
+            for (int keyIndex = 0; keyIndex < abilities.GetNumberOfAbilities(); keyIndex++) {
+                if (Input.GetKeyDown(keyIndex.ToString()) && !abilities.GetRequiresTarget(keyIndex)) {
                     abilities.AttemptSpecialAbility(keyIndex);
                 }
             }
@@ -55,14 +55,27 @@ namespace RPG.Characters {
         }
 
         void OnMouseOverEnemy(EnemyAI enemy) {
+
             if (Input.GetMouseButtonDown(0) && IsTargetInRange(enemy.gameObject)) {
                 weaponSystem.AttackTarget(enemy.gameObject);
             } else if (Input.GetMouseButtonDown(0) && !IsTargetInRange(enemy.gameObject)) {
                 StartCoroutine(MoveAndAttack(enemy));
-            } else if (Input.GetMouseButtonDown(1) && IsTargetInRange(enemy.gameObject)) {
-                abilities.AttemptSpecialAbility(0, enemy.gameObject);
-            } else if (Input.GetMouseButtonDown(1) && !IsTargetInRange(enemy.gameObject)) {
-                StartCoroutine(MoveAndPowerAttack(enemy));
+            }
+
+            for (int keyIndex = 0; keyIndex < abilities.GetNumberOfAbilities(); keyIndex++) {
+                if (abilities.GetRequiresTarget(keyIndex)) {
+                    if (Input.GetKeyDown(keyIndex.ToString()) && IsTargetInRange(enemy.gameObject)) { // Alphanumeric keys
+                        abilities.AttemptSpecialAbility(keyIndex, enemy.gameObject);
+                    } else if (Input.GetKeyDown(keyIndex.ToString()) && !IsTargetInRange(enemy.gameObject)) {
+                        StartCoroutine(MoveAndSpecialAttack(enemy.gameObject));
+
+                        
+                    } else if (Input.GetMouseButtonDown(1) && IsTargetInRange(enemy.gameObject)) { // Right Click
+                        abilities.AttemptSpecialAbility(0, enemy.gameObject);
+                    } else if (Input.GetMouseButtonDown(1) && !IsTargetInRange(enemy.gameObject)) {
+                        StartCoroutine(MoveAndPowerAttack(enemy));
+                    }
+                }
             }
         }
 
@@ -77,7 +90,6 @@ namespace RPG.Characters {
 
         IEnumerator MoveAndAttack(EnemyAI enemy) {
             updatedTarget = enemy.gameObject;
-            //weaponSystem.StopAttacking();
             yield return StartCoroutine(MoveToTarget(enemy.gameObject));
             weaponSystem.AttackTarget(enemy.gameObject);
         }
@@ -86,6 +98,17 @@ namespace RPG.Characters {
             updatedTarget = enemy.gameObject;
             yield return StartCoroutine(MoveToTarget(enemy.gameObject));
             abilities.AttemptSpecialAbility(0, enemy.gameObject);
+        }
+
+        IEnumerator MoveAndSpecialAttack(GameObject enemy) {
+            for (int keyIndex = 1; keyIndex < abilities.GetNumberOfAbilities(); keyIndex++) {
+                if (Input.GetKeyDown(keyIndex.ToString())) {
+                    print("Pressed key: " + keyIndex);
+                    updatedTarget = enemy;
+                    yield return StartCoroutine(MoveToTarget(enemy));
+                    abilities.AttemptSpecialAbility(keyIndex, enemy);
+                }
+            }
         }
 
     } // PlayerMovement
